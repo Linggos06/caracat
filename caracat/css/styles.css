@@ -440,3 +440,18 @@ nav {
   width: 20px;
   height: 25.84px;
 }
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 50px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #dfdbdb;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #ffffff;
+}

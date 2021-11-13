@@ -244,5 +244,21 @@ nav {
 	 height: 25.84px;
 }
 
-.swiper-pagination {
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal,
+ .swiper-pagination-custom, .swiper-pagination-fraction {
+	bottom: 50px;
 }
+
+// .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, 
+// .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
+//     left: 90%;
+//     transform: translateX(-50%);
+// }
+
+.swiper-pagination-bullet {
+	background-color: rgb(223, 219, 219);
+  }
+  
+  .swiper-pagination-bullet-active {
+	background-color: $white;
+  }
