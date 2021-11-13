@@ -118,7 +118,6 @@ function images() {
   return src(path.src.img)
   .pipe(imagemin([
      imagemin.gifsicle({interlaced: true}),
-     imagemin.mozjpeg({quality: 75, progressive: true}),
      imagemin.optipng({optimizationLevel: 3}),
      imagemin.svgo({
          plugins: [

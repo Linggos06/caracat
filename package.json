@@ -27,7 +27,12 @@
     "gulp-ttf2woff": "^1.1.1",
     "gulp-ttf2woff2": "^4.0.1",
     "gulp-uglify-es": "^3.0.0",
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "mozjpeg": "^8.0.0",
     "npm-check-updates": "^11.8.5",
+    "optipng-bin": "^8.1.0",
+    "pngquant-bin": "^7.0.2",
     "sass": "latest"
   },
   "dependencies": {}
