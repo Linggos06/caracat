@@ -192,8 +192,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: inherit;
-  font-weight: 400;
+  font-family: "FreightBigProBook";
+  font-weight: normal;
+  font-style: normal;
 }
 
 header {
@@ -454,4 +455,283 @@ nav {
 
 .swiper-pagination-bullet-active {
   background-color: #ffffff;
+}
+
+.innovations wrapper {
+  padding: 0 5px;
+  width: 100%;
+}
+
+.innovations_container {
+  margin: 0 auto;
+  width: 70%;
+  padding-top: calc(20px + 47 * (100vw - 320px) / 1600);
+  padding-bottom: calc(30px + 67 * (100vw - 320px) / 1600);
+}
+
+.innovations_container h2 {
+  font-size: calc(22px + 68 * (100vw - 320px) / 1600);
+  line-height: calc(30px + 83 * (100vw - 320px) / 1600);
+  color: #CA9561;
+  padding-bottom: 10px;
+}
+
+.innovations_container h3 {
+  font-family: "FreightBigProLight";
+  font-weight: 300;
+  font-style: italic;
+  font-size: calc(18px + 42 * (100vw - 320px) / 1600);
+  line-height: calc(25px + 51 * (100vw - 320px) / 1600);
+  letter-spacing: -2px;
+  color: #595B60;
+  padding-bottom: 27px;
+}
+
+.innovations_container p {
+  font-family: "FreightBigProLight";
+  font-weight: 200;
+  font-style: normal;
+  font-size: calc(14px + 16 * (100vw - 320px) / 1600);
+  line-height: calc(20px + 17 * (100vw - 320px) / 1600);
+  letter-spacing: -1px;
+  color: #595B60;
+}
+
+.seasons_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 900px;
+}
+
+.nature1 {
+  background: url("../img/nature1.jpg") center/cover no-repeat;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 325px;
+          flex: 0 1 325px;
+}
+
+.nature2 {
+  background: url("../img/nature2.jpg") center/cover no-repeat;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 325px;
+          flex: 0 1 325px;
+}
+
+.nature3 {
+  background: url("../img/nature3.jpg") center/cover no-repeat;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 325px;
+          flex: 0 1 325px;
+}
+
+.nature4 {
+  position: relative;
+  background: url("../img/nature4.jpg") center/cover no-repeat;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 956px;
+          flex: 0 1 956px;
+}
+
+.nature4 h2 {
+  position: absolute;
+  top: 35%;
+  left: 15%;
+  max-width: 574px;
+  font-size: calc(20px + 60 * (100vw - 320px) / 1600);
+  line-height: calc(28px + 62 * (100vw - 320px) / 1600);
+}
+
+.new_design .wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.new_design_container {
+  margin-left: 10%;
+  margin-right: 0;
+  width: 90%;
+  height: auto;
+  padding-top: calc(30px + 115 * (100vw - 320px) / 1600);
+  padding-bottom: calc(30px + 140 * (100vw - 320px) / 1600);
+}
+
+.new_design_container h2 {
+  font-size: calc(24px + 149 * (100vw - 320px) / 1600);
+  line-height: calc(32px + 183 * (100vw - 320px) / 1600);
+  color: #093B9F;
+  padding-left: calc(20px + 57 * (100vw - 320px) / 1600);
+}
+
+.new_design_container h3 {
+  font-size: calc(24px + 149 * (100vw - 320px) / 1600);
+  line-height: calc(32px + 183 * (100vw - 320px) / 1600);
+  background-color: #093B9F;
+  padding-left: calc(20px + 57 * (100vw - 320px) / 1600);
+}
+
+.model .swiper-slide {
+  position: static;
+}
+
+.model h2 {
+  color: black;
+}
+
+.model .swiper-button-prev {
+  background: url(../img/arrow_left.png) center/cover no-repeat;
+  width: 17px;
+  height: 30px;
+  left: 50px;
+}
+
+.model .swiper-button-prev:after {
+  content: "";
+  width: 17px;
+  height: 30px;
+}
+
+.model .swiper-button-next {
+  background: url(../img/arrow_right.png) center/cover no-repeat;
+  width: 17px;
+  height: 30px;
+  right: 50px;
+}
+
+.model .swiper-button-next:after {
+  content: "";
+  width: 17px;
+  height: 30px;
+}
+
+.model1 {
+  background-image: url("../img/image1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-top: 46.875%;
+}
+
+.model2 {
+  background-image: url("../img/image2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-top: 46.875%;
+}
+
+.model3 {
+  background-image: url("../img/image3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-top: 46.875%;
+}
+
+.caracat_details {
+  background-color: #093B9F;
+  width: 100%;
+}
+
+.caracat_details_container {
+  max-width: 1031px;
+  width: 70%;
+  margin: 0 auto;
+  padding-top: calc(40px + 216 * (100vw - 320px) / 1600);
+  padding-bottom: calc(45px + 215 * (100vw - 320px) / 1600);
+}
+
+.caracat_details_container h2 {
+  font-size: calc(20px + 70 * (100vw - 320px) / 1600);
+  line-height: calc(28px + 85 * (100vw - 320px) / 1600);
+}
+
+.caracat_details_container p {
+  font-family: "FreightBigProLight";
+  font-weight: 200;
+  font-style: normal;
+  font-size: calc(14px + 16 * (100vw - 320px) / 1600);
+  line-height: calc(20px + 17 * (100vw - 320px) / 1600);
+  letter-spacing: -1px;
+}
+
+.comf_container {
+  position: relative;
+  background-image: url("../img/comfy_img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 0;
+  padding-top: 46.875%;
+}
+
+.comf_text {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  max-width: 680px;
+  width: 100%;
+}
+
+.comf_text h2 {
+  height: auto;
+  font-size: calc(22px + 68 * (100vw - 320px) / 1600);
+  line-height: calc(30px + 83 * (100vw - 320px) / 1600);
+}
+
+.comf_text h3 {
+  font-family: "FreightBigProLight";
+  font-weight: 300;
+  font-style: italic;
+  font-size: calc(18px + 27 * (100vw - 320px) / 1600);
+  line-height: calc(25px + 32 * (100vw - 320px) / 1600);
+  letter-spacing: -2px;
+  padding-bottom: 13px;
+}
+
+.comf_text p {
+  font-family: "FreightBigProLight";
+  font-weight: 200;
+  font-style: normal;
+  font-size: calc(14px + 21 * (100vw - 320px) / 1600);
+  line-height: calc(20px + 24 * (100vw - 320px) / 1600);
+  letter-spacing: -1px;
+}
+
+.interior_container {
+  width: 82.7%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: calc(25px + 42 * (100vw - 320px) / 1600);
+  padding-bottom: calc(35px + 84 * (100vw - 320px) / 1600);
+}
+
+.interior_item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 788.61px;
+          flex: 0 1 788.61px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-bottom: 10px;
+}
+
+.interior_item:not(:nth-child(even)) {
+  margin-right: 10px;
 }

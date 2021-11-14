@@ -2,7 +2,6 @@ const swiper = new Swiper(".swiper", {
     // Optional parameters
     direction: "horizontal",
     loop: true,
-    grabCursor: true,
     speed: 950,
   
     freeMode: {
