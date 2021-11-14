@@ -709,16 +709,20 @@ nav {
 .interior_container {
   width: 82.7%;
   margin: 0 auto;
+  padding-top: calc(25px + 42 * (100vw - 320px) / 1600);
+  padding-bottom: calc(35px + 84 * (100vw - 320px) / 1600);
+}
+
+.upper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: calc(25px + 42 * (100vw - 320px) / 1600);
-  padding-bottom: calc(35px + 84 * (100vw - 320px) / 1600);
+}
+
+.bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .interior_item {
