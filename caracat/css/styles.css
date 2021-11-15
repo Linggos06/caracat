@@ -197,6 +197,22 @@ h6 {
   font-style: normal;
 }
 
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
 header {
   position: absolute;
   top: 0;
@@ -733,4 +749,298 @@ nav {
 
 .interior_item_container:not(:nth-child(even)) {
   margin-right: 10px;
+}
+
+.advantages .slide_carousel {
+  padding-top: calc(15px + 35 * (100vw - 320px) / 1600);
+  padding-bottom: calc(5px + 15 * (100vw - 320px) / 1600);
+}
+
+.swiper3 .swiper-button-prev3 {
+  background: url(../img/arrow_left.png) center/cover no-repeat;
+  width: 17px;
+  height: 30px;
+  left: 50px;
+}
+
+.swiper3 .swiper-button-prev3:after {
+  content: "";
+  width: 17px;
+  height: 30px;
+}
+
+.swiper3 .swiper-button-next3 {
+  background: url(../img/arrow_right.png) center/cover no-repeat;
+  width: 17px;
+  height: 30px;
+  right: 50px;
+}
+
+.swiper3 .swiper-button-next3:after {
+  content: "";
+  width: 17px;
+  height: 30px;
+}
+
+.slide_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1211px;
+  margin: 0 auto;
+}
+
+.slide_image {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 468px;
+          flex: 0 1 468px;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 468px;
+  margin-right: calc(23px + 38 * (100vw - 320px) / 1600);
+}
+
+.slide_image1 {
+  background-image: url(../img/slider3-1.jpg);
+}
+
+.slide_text {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.slide_text h2 {
+  height: auto;
+  font-size: calc(22px + 68 * (100vw - 320px) / 1600);
+  line-height: calc(30px + 83 * (100vw - 320px) / 1600);
+  color: #CA9561;
+}
+
+.slide_text h3 {
+  font-family: "FreightBigProLight";
+  font-weight: 300;
+  font-style: italic;
+  font-size: calc(18px + 27 * (100vw - 320px) / 1600);
+  line-height: calc(25px + 32 * (100vw - 320px) / 1600);
+  letter-spacing: -2px;
+  padding-bottom: 13px;
+  color: #595B60;
+}
+
+.slide_text p {
+  font-family: "FreightBigProLight";
+  font-weight: 200;
+  font-style: normal;
+  font-size: calc(14px + 21 * (100vw - 320px) / 1600);
+  line-height: calc(20px + 24 * (100vw - 320px) / 1600);
+  letter-spacing: -1px;
+  color: #595B60;
+}
+
+.slide_image2 {
+  background-image: url(../img/slider3-2.jpg);
+}
+
+.slide_image3 {
+  background-image: url(../img/slider3-3.jpg);
+}
+
+.slide_image4 {
+  background-image: url(../img/slider3-4.jpg);
+}
+
+.slide_image5 {
+  background-image: url(../img/slider3-5.jpg);
+}
+
+.slide_image6 {
+  background-image: url(../img/slider3-6.jpg);
+}
+
+.contacts {
+  width: 100%;
+}
+
+.contacts_container {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: calc(23px + 42 * (100vw - 320px) / 1600);
+}
+
+.contacts_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.contacts_info .paragraph {
+  font-family: "FreightBigProLight";
+  font-weight: 200;
+  font-style: normal;
+  font-size: calc(14px + 21 * (100vw - 320px) / 1600);
+  line-height: calc(20px + 24 * (100vw - 320px) / 1600);
+  letter-spacing: -1px;
+  color: #595B60;
+}
+
+.contacts_info .paragraph span {
+  display: inline-block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 13px;
+}
+
+.contacts_info .paragraph p {
+  display: inline-block;
+}
+
+.contacts_info .paragraph:not(:last-child) {
+  margin-bottom: calc(20px + 21 * (100vw - 320px) / 1600);
+}
+
+.contacts_info_header {
+  font-size: calc(22px + 58 * (100vw - 320px) / 1600);
+  line-height: calc(30px + 76 * (100vw - 320px) / 1600);
+  color: #CA9561;
+  margin-bottom: calc(20px + 35 * (100vw - 320px) / 1600);
+}
+
+.contacts_address span {
+  width: 32px;
+  height: 34px;
+  background-image: url(../img/address.png);
+}
+
+.contacts_phone span {
+  width: 25px;
+  height: 26px;
+  background-image: url(../img/phone.png);
+}
+
+.contacts_website span {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/instagram2.png);
+}
+
+.map {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 55%;
+          flex: 0 1 55%;
+  max-width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/map.png);
+}
+
+footer {
+  width: 100%;
+  background-color: #093B9F;
+}
+
+.footer_container {
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 27px;
+  padding-bottom: 27px;
+}
+
+.footer_menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.footer_menu li:not(:first-child) {
+  padding-right: calc(10px + 20 * (100vw - 320px) / 1600);
+  padding-left: calc(10px + 20 * (100vw - 320px) / 1600);
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.footer_menu li:first-child {
+  padding-right: calc(10px + 20 * (100vw - 320px) / 1600);
+  font-weight: bold;
+}
+
+.footer_menu li:not(:last-child) {
+  border-right: 2px solid #ffffff;
+}
+
+.footer_menu a {
+  display: inline-block;
+  color: #ffffff;
+}
+
+.footer_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.footer_links span {
+  display: inline-block;
+  width: 29px;
+  height: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.footer_links span:not(:last-child) {
+  margin-right: 24.8px;
+}
+
+.twitter_link {
+  background-image: url(../img/twitter.png);
+}
+
+.linkedin_link {
+  background-image: url(../img/linkedin.png);
+}
+
+.facebook_link {
+  background-image: url(../img/facebook.png);
+}
+
+.instagram_link {
+  background-image: url(../img/instagram1.png);
+}
+
+.youtube_link {
+  background-image: url(../img/youtube.png);
+}
+
+.web_link {
+  background-image: url(../img/rss.png);
 }
