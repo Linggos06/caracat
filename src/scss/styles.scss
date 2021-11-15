@@ -220,24 +220,24 @@ nav {
 .slide3 {
 	@include div-same-size-as-background-img("../img/hero3.jpg", 1920, 900);
 }
-.swiper-button-prev {
+.swiper-button-prev1 {
 	font-family: serif;
 	background: url(../img/angle-left-solid.svg) center/cover no-repeat;
 	 width: 20px;
 	 height: 25.84px;
 }
-.swiper-button-prev:after {
+.swiper-button-prev1:after {
 	content: '';
 	 width: 20px;
 	 height: 25.84px;
 }
-.swiper-button-next {
+.swiper-button-next1 {
 	font-family: serif;
 	background: url(../img/angle-right-solid.svg) center/cover no-repeat;
 	 width: 20px;
 	 height: 25.84px;
 }
-.swiper-button-next:after {
+.swiper-button-next1:after {
 	content: '';
 	 width: 20px;
 	 height: 25.84px;
@@ -373,30 +373,28 @@ height: 900px;
 	}
 }
 .model {
-	& .swiper-slide {
-		position: static;
-	}
+
 	& h2 {
 		color: black;
 	}
-		& .swiper-button-prev {
+		& .swiper-button-prev2 {
 			background: url(../img/arrow_left.png) center/cover no-repeat;
 			 width: 17px;
 			 height: 30px;
 			 left: 50px;
 		}
-		& .swiper-button-prev:after {
+		& .swiper-button-prev2:after {
 			content: '';
 			 width: 17px;
 			 height: 30px;
 		}
-		& .swiper-button-next {
+		& .swiper-button-next2 {
 			background: url(../img/arrow_right.png) center/cover no-repeat;
 			 width: 17px;
 			 height: 30px;
 			 right: 50px;
 		}
-		& .swiper-button-next:after {
+		& .swiper-button-next2:after {
 			content: '';
 			 width: 17px;
 			 height: 30px;
@@ -482,19 +480,22 @@ height: 900px;
 	padding-top: calc(25px + (67 - 25) * ((100vw - 320px) / (1920 - 320)));
 	padding-bottom: calc(35px + (119 - 35) * ((100vw - 320px) / (1920 - 320)));
 }
-.upper {
+.upper, .bottom {
 display: flex;
 }
-.bottom {
-	display: flex;
-}
-.interior_item {
-	flex: 0 1 788.61px;
-	object-fit: cover;
-	object-position: center;
+
+.interior_item_container{
+	flex: 0 1 789px;
 	margin-bottom: 10px;
 }
-.interior_item:not(:nth-child(even)) {
+
+.interior_item {
+	max-width: 100%;
+	object-fit: cover;
+	object-position: center;
+	
+}
+.interior_item_container:not(:nth-child(even)) {
 	margin-right: 10px;
 }
 

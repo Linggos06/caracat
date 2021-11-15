@@ -416,27 +416,27 @@ nav {
   padding-top: 46.875%;
 }
 
-.swiper-button-prev {
+.swiper-button-prev1 {
   font-family: serif;
   background: url(../img/angle-left-solid.svg) center/cover no-repeat;
   width: 20px;
   height: 25.84px;
 }
 
-.swiper-button-prev:after {
+.swiper-button-prev1:after {
   content: "";
   width: 20px;
   height: 25.84px;
 }
 
-.swiper-button-next {
+.swiper-button-next1 {
   font-family: serif;
   background: url(../img/angle-right-solid.svg) center/cover no-repeat;
   width: 20px;
   height: 25.84px;
 }
 
-.swiper-button-next:after {
+.swiper-button-next1:after {
   content: "";
   width: 20px;
   height: 25.84px;
@@ -571,35 +571,31 @@ nav {
   padding-left: calc(20px + 57 * (100vw - 320px) / 1600);
 }
 
-.model .swiper-slide {
-  position: static;
-}
-
 .model h2 {
   color: black;
 }
 
-.model .swiper-button-prev {
+.model .swiper-button-prev2 {
   background: url(../img/arrow_left.png) center/cover no-repeat;
   width: 17px;
   height: 30px;
   left: 50px;
 }
 
-.model .swiper-button-prev:after {
+.model .swiper-button-prev2:after {
   content: "";
   width: 17px;
   height: 30px;
 }
 
-.model .swiper-button-next {
+.model .swiper-button-next2 {
   background: url(../img/arrow_right.png) center/cover no-repeat;
   width: 17px;
   height: 30px;
   right: 50px;
 }
 
-.model .swiper-button-next:after {
+.model .swiper-button-next2:after {
   content: "";
   width: 17px;
   height: 30px;
@@ -713,29 +709,28 @@ nav {
   padding-bottom: calc(35px + 84 * (100vw - 320px) / 1600);
 }
 
-.upper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
+.upper,
 .bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.interior_item {
+.interior_item_container {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 788.61px;
-          flex: 0 1 788.61px;
+      -ms-flex: 0 1 789px;
+          flex: 0 1 789px;
+  margin-bottom: 10px;
+}
+
+.interior_item {
+  max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  margin-bottom: 10px;
 }
 
-.interior_item:not(:nth-child(even)) {
+.interior_item_container:not(:nth-child(even)) {
   margin-right: 10px;
 }
