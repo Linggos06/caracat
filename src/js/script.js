@@ -1,3 +1,25 @@
+const body = document.querySelector("body");
+const burger = document.querySelector(".icon_menu");
+const menu = document.querySelector(".header_links");
+const close_on_mobile = document.querySelector(".close_on_mobile");
+const current_year = document.querySelector(".year");
+
+current_year.textContent = new Date().getFullYear();
+
+burger.addEventListener("click", (e) => {
+  menu.classList.add("active");
+    body.style.position = "fixed";
+    body.style.overflowY = "scroll";
+});
+
+close_on_mobile.addEventListener("click", closeMenu);
+
+function closeMenu() {
+  menu.classList.remove("active");
+  body.style.position = "static";
+    body.style.overflowY = "visible";
+}
+
 const swiper1 = new Swiper(".slide_carousel.swiper1", {
     // Optional parameters
     direction: "horizontal",

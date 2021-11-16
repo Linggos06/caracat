@@ -1,5 +1,24 @@
 "use strict";
 
+var body = document.querySelector("body");
+var burger = document.querySelector(".icon_menu");
+var menu = document.querySelector(".header_links");
+var close_on_mobile = document.querySelector(".close_on_mobile");
+var current_year = document.querySelector(".year");
+current_year.textContent = new Date().getFullYear();
+burger.addEventListener("click", function (e) {
+  menu.classList.add("active");
+  body.style.position = "fixed";
+  body.style.overflowY = "scroll";
+});
+close_on_mobile.addEventListener("click", closeMenu);
+
+function closeMenu() {
+  menu.classList.remove("active");
+  body.style.position = "static";
+  body.style.overflowY = "visible";
+}
+
 var swiper1 = new Swiper(".slide_carousel.swiper1", {
   // Optional parameters
   direction: "horizontal",
