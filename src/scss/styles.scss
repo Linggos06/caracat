@@ -20,6 +20,12 @@
   padding-top: math.div($height, $width) * 100%;
 }
 
+@mixin center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
 @import "fonts";
 
 $black: #000000;
@@ -194,7 +200,8 @@ header {
     flex: 0 0 auto;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #015669;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(1,86,105,1) 50%, rgba(12,153,181,1) 100%);
     z-index: 15;
 
     &.active {
@@ -759,7 +766,7 @@ nav {
 .advantages {
   & .slide_carousel {
     padding-top: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320)));
-    padding-bottom: calc(5px + (20 - 5) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320)));
   }
 }
 
@@ -914,13 +921,88 @@ nav {
   background-image: url(../img/slider3-6.jpg);
 }
 
+//Switch images
+
+.switch_photo {
+	
+}
+.switch_photo_container {
+	position: relative;
+	width: 100%;
+	height: 910px;
+
+	& .slider {
+		position: absolute;
+		appearance: none;
+		width: 100%;
+		height: 100%;
+		background: rgba(#f2f2f2, 0);
+		outline: none;
+		margin: 0;
+		@include center;
+		
+		&::-webkit-slider-thumb {
+		  appearance: none;
+		  width: 6px;
+		  height: 910px;
+		  background: white;
+		  cursor: pointer;
+	  }
+	}
+}
+.img {
+	position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+}
+.background-img {
+	background-image: url("../img/Dis_Yol_Retouch.png");
+	
+}
+.foreground-img {
+	background-image: url("../img/Dis_Deniz_Retouch.png");
+	width: 50.1%;
+}
+.slider-button {
+    $size: 30px;
+    pointer-events: none;
+    position: absolute;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: white;
+    left: calc(50% - 9px);
+    top: calc(50% - 18px);
+    @include center;
+    
+    @mixin arrow-helper() {
+      content: '';
+      padding: 3px;
+      display: inline-block;
+      border: solid #5D5D5D;
+      border-width: 0 2px 2px 0;
+    }
+    &:after {
+      @include arrow-helper();
+      transform: rotate(-45deg);
+    }
+    &:before {
+      @include arrow-helper();
+      transform: rotate(135deg);
+    }
+  }
+
 //Interior
 
 .interior_container {
   width: 82.7%;
   margin: 0 auto;
-  padding-top: calc(25px + (67 - 25) * ((100vw - 320px) / (1920 - 320)));
-  padding-bottom: calc(35px + (119 - 35) * ((100vw - 320px) / (1920 - 320)));
+  padding-top: calc(45px + (67 - 45) * ((100vw - 320px) / (1920 - 320)));
+  padding-bottom: calc(15px + (119 - 15) * ((100vw - 320px) / (1920 - 320)));
 
   @media screen and (max-width: $breakpoint-small_desktop) {
     width: 92.7%;
@@ -1036,16 +1118,20 @@ nav {
   height: 24px;
   background-image: url(../img/instagram2.png);
 }
-.map {
+.map_link {
   flex: 0 1 55%;
   max-width: 100%;
+  
+  @media screen and (max-width: $breakpoint-tablet) {
+    flex: 0 1 45%;
+  }
+}
+.map {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
-  @media screen and (max-width: $breakpoint-tablet) {
-    flex: 0 1 45%;
-  }
+  height: 100%; 
 }
 
 //Footer

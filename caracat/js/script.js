@@ -5,6 +5,14 @@ var burger = document.querySelector(".icon_menu");
 var menu = document.querySelector(".header_links");
 var close_on_mobile = document.querySelector(".close_on_mobile");
 var current_year = document.querySelector(".year");
+var slider = document.querySelector("#slider");
+var foregroundImage = document.querySelector(".foreground-img");
+var sliderButton = document.querySelector(".slider-button");
+slider.addEventListener("change", function (e) {
+  var sliderPos = e.target.value;
+  foregroundImage.style.width = "".concat(sliderPos, "%");
+  sliderButton.style.left = "calc(".concat(sliderPos, "% - 18px)");
+});
 current_year.textContent = new Date().getFullYear();
 burger.addEventListener("click", function (e) {
   menu.classList.add("active");

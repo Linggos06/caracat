@@ -742,7 +742,7 @@ nav {
 
 .advantages .slide_carousel {
   padding-top: calc(15px + 35 * (100vw - 320px) / 1600);
-  padding-bottom: calc(5px + 15 * (100vw - 320px) / 1600);
+  padding-bottom: calc(15px + 35 * (100vw - 320px) / 1600);
 }
 
 .swiper3 .swiper-button-prev3 {
@@ -853,11 +853,108 @@ nav {
   background-image: url(../img/slider3-6.jpg);
 }
 
+.switch_photo_container {
+  position: relative;
+  width: 100%;
+  height: 910px;
+}
+
+.switch_photo_container .slider {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  width: 100%;
+  height: 100%;
+  background: rgba(242, 242, 242, 0);
+  outline: none;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.switch_photo_container .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  width: 6px;
+  height: 910px;
+  background: white;
+  cursor: pointer;
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+}
+
+.background-img {
+  background-image: url("../img/Dis_Yol_Retouch.png");
+}
+
+.foreground-img {
+  background-image: url("../img/Dis_Deniz_Retouch.png");
+  width: 50.1%;
+}
+
+.slider-button {
+  pointer-events: none;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  left: calc(50% - 9px);
+  top: calc(50% - 18px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-button:after {
+  content: "";
+  padding: 3px;
+  display: inline-block;
+  border: solid #5D5D5D;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.slider-button:before {
+  content: "";
+  padding: 3px;
+  display: inline-block;
+  border: solid #5D5D5D;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(135deg);
+      -ms-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
 .interior_container {
   width: 82.7%;
   margin: 0 auto;
-  padding-top: calc(25px + 42 * (100vw - 320px) / 1600);
-  padding-bottom: calc(35px + 84 * (100vw - 320px) / 1600);
+  padding-top: calc(45px + 22 * (100vw - 320px) / 1600);
+  padding-bottom: calc(15px + 104 * (100vw - 320px) / 1600);
 }
 
 .upper,
@@ -958,15 +1055,19 @@ nav {
   background-image: url(../img/instagram2.png);
 }
 
-.map {
+.map_link {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 55%;
           flex: 0 1 55%;
   max-width: 100%;
+}
+
+.map {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
+  height: 100%;
 }
 
 footer {
@@ -1252,7 +1353,10 @@ footer {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    background-color: #015669;
+    background: #020024;
+    background: -webkit-gradient(linear, left top, left bottom, from(#020024), color-stop(50%, #015669), to(#0c99b5));
+    background: -o-linear-gradient(top, #020024 0%, #015669 50%, #0c99b5 100%);
+    background: linear-gradient(180deg, #020024 0%, #015669 50%, #0c99b5 100%);
     z-index: 15;
   }
 
@@ -1488,7 +1592,7 @@ footer {
     letter-spacing: 0;
   }
 
-  .map {
+  .map_link {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 45%;
             flex: 0 1 45%;

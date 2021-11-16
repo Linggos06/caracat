@@ -3,6 +3,15 @@ const burger = document.querySelector(".icon_menu");
 const menu = document.querySelector(".header_links");
 const close_on_mobile = document.querySelector(".close_on_mobile");
 const current_year = document.querySelector(".year");
+const slider = document.querySelector("#slider");
+const foregroundImage = document.querySelector(".foreground-img");
+const sliderButton = document.querySelector(".slider-button");
+
+slider.addEventListener("change", (e) => {
+  const sliderPos = e.target.value;
+  foregroundImage.style.width = `${sliderPos}%`;
+  sliderButton.style.left = `calc(${sliderPos}% - 18px)`;
+})
 
 current_year.textContent = new Date().getFullYear();
 
