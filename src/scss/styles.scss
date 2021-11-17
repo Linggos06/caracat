@@ -923,49 +923,90 @@ nav {
 
 //Switch images
 
-.switch_photo {
-	
-}
-.switch_photo_container {
-	position: relative;
+ .switch_photo_container {
+ 	position: relative;
 	width: 100%;
-	height: 910px;
+ 	height: 100vw;
+ 	max-height: 910px;
+ 	max-width: 1920px;
+	overflow: hidden;
 
-	& .slider {
+	& h2 {
 		position: absolute;
-		appearance: none;
-		width: 100%;
-		height: 100%;
-		background: rgba(#f2f2f2, 0);
-		outline: none;
-		margin: 0;
-		@include center;
-		
-		&::-webkit-slider-thumb {
-		  appearance: none;
-		  width: 6px;
-		  height: 910px;
-		  background: white;
-		  cursor: pointer;
-	  }
-	}
-}
-.img {
-	position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-}
-.background-img {
-	background-image: url("../img/Dis_Yol_Retouch.png");
+		top: 60%;
+		left: 40%;
+		font-family: 'FreightBigProLight', serif;
+        font-weight: 300;
+        font-style: italic;
+		max-width: 570px;
+		text-align: right;
+		font-size: calc(20px + (120 - 20) * ((100vw - 320px) / (1920 - 320)));
+		line-height: calc(28px + (120 - 28) * ((100vw - 320px) / (1920 - 320)));
+
+		@media screen and (min-width: 1400px) {
+			top: 45%;
+			}
 	
-}
-.foreground-img {
-	background-image: url("../img/Dis_Deniz_Retouch.png");
-	width: 50.1%;
+		@media screen and (max-width: $breakpoint-small_desktop) {
+		max-width: 470px;
+
+		}
+
+		@media screen and (max-width: 810px) {
+			max-width: 370px;
+			}
+	
+		@media screen and (max-width: $breakpoint-tablet) {
+		  max-width: 250px;
+		}
+
+		@media screen and (max-width: 500px) {
+			max-width: 200px;
+		  }
+
+		  @media screen and (max-width: 400px) {
+			max-width: 170px;
+		  }
+	}
+
+ 	& .slider {
+ 		position: absolute;
+ 		appearance: none;
+ 		width: 100%;
+ 		height: 100%;
+ 		background: rgba(#f2f2f2, 0);
+ 		outline: none;
+ 		margin: 0;
+	
+ 		cursor: pointer;
+ 		@include center;
+		
+ 		&::-webkit-slider-thumb {
+ 		  appearance: none;
+ 		  width: 5px;
+ 		  height: 100vw;
+		   border-right: 5px solid rgba(255,255,255,0.7);
+		   box-shadow: 10px 0 15px -13px #000;
+ 		  cursor: pointer;
+ 	  }
+ 	}
+ }
+ .img {
+ 	position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ 	background-size: cover;
+ 	background-repeat: no-repeat;
+ }
+ .background-img {
+ 	background-image: url("../img/Dis_Yol_Retouch.jpg");
+	
+ }
+ .foreground-img {
+ 	background-image: url("../img/Dis_Deniz_Retouch.jpg");
+ 	width: 38%;
 }
 .slider-button {
     $size: 30px;
@@ -975,8 +1016,8 @@ nav {
     height: $size;
     border-radius: 50%;
     background-color: white;
-    left: calc(50% - 9px);
-    top: calc(50% - 18px);
+    left: calc(38% - 15px);
+    top: calc(50% - 15px);
     @include center;
     
     @mixin arrow-helper() {
@@ -995,6 +1036,7 @@ nav {
       transform: rotate(135deg);
     }
   }
+
 
 //Interior
 

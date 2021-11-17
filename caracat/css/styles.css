@@ -856,7 +856,23 @@ nav {
 .switch_photo_container {
   position: relative;
   width: 100%;
-  height: 910px;
+  height: 100vw;
+  max-height: 910px;
+  max-width: 1920px;
+  overflow: hidden;
+}
+
+.switch_photo_container h2 {
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  font-family: "FreightBigProLight", serif;
+  font-weight: 300;
+  font-style: italic;
+  max-width: 570px;
+  text-align: right;
+  font-size: calc(20px + 100 * (100vw - 320px) / 1600);
+  line-height: calc(28px + 92 * (100vw - 320px) / 1600);
 }
 
 .switch_photo_container .slider {
@@ -869,6 +885,7 @@ nav {
   background: rgba(242, 242, 242, 0);
   outline: none;
   margin: 0;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -883,9 +900,11 @@ nav {
 .switch_photo_container .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
-  width: 6px;
-  height: 910px;
-  background: white;
+  width: 5px;
+  height: 100vw;
+  border-right: 5px solid rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 10px 0 15px -13px #000;
+          box-shadow: 10px 0 15px -13px #000;
   cursor: pointer;
 }
 
@@ -895,17 +914,17 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .background-img {
-  background-image: url("../img/Dis_Yol_Retouch.png");
+  background-image: url("../img/Dis_Yol_Retouch.jpg");
 }
 
 .foreground-img {
-  background-image: url("../img/Dis_Deniz_Retouch.png");
-  width: 50.1%;
+  background-image: url("../img/Dis_Deniz_Retouch.jpg");
+  width: 38%;
 }
 
 .slider-button {
@@ -915,8 +934,8 @@ nav {
   height: 30px;
   border-radius: 50%;
   background-color: white;
-  left: calc(50% - 9px);
-  top: calc(50% - 18px);
+  left: calc(38% - 15px);
+  top: calc(50% - 15px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1173,6 +1192,12 @@ footer {
   background-image: url(../img/rss.png);
 }
 
+@media screen and (min-width: 1400px) {
+  .switch_photo_container h2 {
+    top: 45%;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .slide_container {
     -webkit-box-pack: space-evenly;
@@ -1276,6 +1301,10 @@ footer {
             flex: 0 1 48%;
   }
 
+  .switch_photo_container h2 {
+    max-width: 470px;
+  }
+
   .interior_container {
     width: 92.7%;
   }
@@ -1316,6 +1345,12 @@ footer {
 
   .swiper3 .swiper-button-next3 {
     right: 10px;
+  }
+}
+
+@media screen and (max-width: 810px) {
+  .switch_photo_container h2 {
+    max-width: 370px;
   }
 }
 
@@ -1556,6 +1591,10 @@ footer {
     letter-spacing: 0;
   }
 
+  .switch_photo_container h2 {
+    max-width: 250px;
+  }
+
   .interior_container {
     width: 97.7%;
   }
@@ -1641,6 +1680,12 @@ footer {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .switch_photo_container h2 {
+    max-width: 200px;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .model_slide {
     height: 320px;
@@ -1662,5 +1707,9 @@ footer {
   .comf_text {
     top: 10%;
     color: #0f0c05;
+  }
+
+  .switch_photo_container h2 {
+    max-width: 170px;
   }
 }

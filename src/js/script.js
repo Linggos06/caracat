@@ -7,11 +7,14 @@ const slider = document.querySelector("#slider");
 const foregroundImage = document.querySelector(".foreground-img");
 const sliderButton = document.querySelector(".slider-button");
 
-slider.addEventListener("change", (e) => {
+slider.addEventListener("change", ch)
+slider.addEventListener("input", ch)
+
+function ch(e){
   const sliderPos = e.target.value;
   foregroundImage.style.width = `${sliderPos}%`;
-  sliderButton.style.left = `calc(${sliderPos}% - 18px)`;
-})
+   sliderButton.style.left = `calc(${sliderPos}% - 15px)`;
+}
 
 current_year.textContent = new Date().getFullYear();
 

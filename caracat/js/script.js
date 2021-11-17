@@ -8,11 +8,15 @@ var current_year = document.querySelector(".year");
 var slider = document.querySelector("#slider");
 var foregroundImage = document.querySelector(".foreground-img");
 var sliderButton = document.querySelector(".slider-button");
-slider.addEventListener("change", function (e) {
+slider.addEventListener("change", ch);
+slider.addEventListener("input", ch);
+
+function ch(e) {
   var sliderPos = e.target.value;
   foregroundImage.style.width = "".concat(sliderPos, "%");
-  sliderButton.style.left = "calc(".concat(sliderPos, "% - 18px)");
-});
+  sliderButton.style.left = "calc(".concat(sliderPos, "% - 15px)");
+}
+
 current_year.textContent = new Date().getFullYear();
 burger.addEventListener("click", function (e) {
   menu.classList.add("active");
