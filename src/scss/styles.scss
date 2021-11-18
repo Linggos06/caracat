@@ -220,7 +220,7 @@ header {
     left: 0;
     right: 0;
     top: -200%;
-    transition: top 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
     padding: 70px 15px 30px 15px;
     flex: 0 0 auto;
     flex-direction: column;
@@ -996,7 +996,7 @@ nav {
   & h2 {
     position: absolute;
     bottom: 10%;
-    left: 38%;
+    right: 50px;
     font-family: "FreightBigProLight", serif;
     font-weight: 300;
     font-style: italic;
@@ -1011,16 +1011,20 @@ nav {
       top: 45%;
     }
 
+    @media screen and (max-width: 1200px) {
+      max-width: 480px;
+    }
+
     @media screen and (max-width: $breakpoint-small_desktop) {
       max-width: 470px;
     }
 
-    @media screen and (max-width: 810px) {
+    @media screen and (max-width: 860px) {
       max-width: 370px;
     }
 
     @media screen and (max-width: $breakpoint-tablet) {
-      max-width: 250px;
+      max-width: 240px;
     }
 
     @media screen and (max-width: 500px) {

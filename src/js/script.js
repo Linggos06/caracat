@@ -9,6 +9,20 @@ const sliderButton = document.querySelector(".slider-button");
 const backgr_header = document.querySelector(".background-img_header");
 const foregr_header = document.querySelector(".foreground-img_header");
 
+if(document.documentElement.clientWidth <= 992){
+  let value = 51;
+  slider.value = value;
+  foregroundImage.style.width = `${value}%`;
+  sliderButton.style.left = `calc(${value}% - 15px)`;
+}
+
+if(document.documentElement.clientWidth <= 780){
+  let value = 58;
+  slider.value = value;
+  foregroundImage.style.width = `${value}%`;
+  sliderButton.style.left = `calc(${value}% - 15px)`;
+}
+
 slider.addEventListener("change", ch);
 slider.addEventListener("input", ch);
 slider.addEventListener("touchmove", ch);
@@ -19,10 +33,10 @@ function ch(e){
    sliderButton.style.left = `calc(${sliderPos}% - 15px)`;
    let w = Number(foregroundImage.style.width.split('%')[0]);
    console.log(w);
-   if(w > 49){
+   if(w >= 51){
     foregr_header.style.opacity = "1";
     backgr_header.style.opacity = "0";
- }else if(w <= 48) {
+ }else if(w <= 50) {
     backgr_header.style.opacity = "1";
     foregr_header.style.opacity = "0";
 }

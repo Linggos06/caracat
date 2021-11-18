@@ -903,7 +903,7 @@ nav {
 .switch_photo_container h2 {
   position: absolute;
   bottom: 10%;
-  left: 38%;
+  right: 50px;
   font-family: "FreightBigProLight", serif;
   font-weight: 300;
   font-style: italic;
@@ -1374,6 +1374,12 @@ footer .link:hover {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .switch_photo_container h2 {
+    max-width: 480px;
+  }
+}
+
 @media screen and (max-width: 1099px) {
   .slide_header {
     width: 320px;
@@ -1468,6 +1474,12 @@ footer .link:hover {
   }
 }
 
+@media screen and (max-width: 860px) {
+  .switch_photo_container h2 {
+    max-width: 370px;
+  }
+}
+
 @media screen and (max-width: 850px) {
   .swiper3 .swiper-button-prev3 {
     left: 10px;
@@ -1475,12 +1487,6 @@ footer .link:hover {
 
   .swiper3 .swiper-button-next3 {
     right: 10px;
-  }
-}
-
-@media screen and (max-width: 810px) {
-  .switch_photo_container h2 {
-    max-width: 370px;
   }
 }
 
@@ -1504,9 +1510,9 @@ footer .link:hover {
     left: 0;
     right: 0;
     top: -200%;
-    -webkit-transition: top 0.7s ease 0s;
-    -o-transition: top 0.7s ease 0s;
-    transition: top 0.7s ease 0s;
+    -webkit-transition: all 0.7s ease 0s;
+    -o-transition: all 0.7s ease 0s;
+    transition: all 0.7s ease 0s;
     padding: 70px 15px 30px 15px;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 auto;
@@ -1710,7 +1716,7 @@ footer .link:hover {
   }
 
   .switch_photo_container h2 {
-    max-width: 250px;
+    max-width: 240px;
   }
 
   .interior_container {
