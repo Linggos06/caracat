@@ -36,7 +36,7 @@ let parallaxSlider = ".swiper1";
 const parallaxSliderOptions = {
   direction: "horizontal",
   loop: true,
-  speed: 1000,
+  speed: 1100,
   parallax: true,
   grabCursor: true,
   autoplay: {
@@ -46,7 +46,6 @@ const parallaxSliderOptions = {
     nextEl: '.swiper-button-next1',
     prevEl: '.swiper-button-prev1',
   },
-
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
@@ -74,11 +73,9 @@ const parallaxSliderOptions = {
 window.addEventListener("resize", () => {
   swiper1.destroy();
   swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
-}
+})
 
-)
-
-  const swiper2 = new Swiper(".slide_carousel.swiper2", {
+  const swiper2 = new Swiper(".swiper2", {
     direction: "horizontal",
     loop: true,
     speed: 950,
@@ -92,7 +89,7 @@ window.addEventListener("resize", () => {
     },
   });
 
-  const swiper3 = new Swiper(".slide_carousel.swiper3", {
+  const swiper3 = new Swiper(".swiper3", {
     loop: true,
     speed: 950,
     freeMode: {

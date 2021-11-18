@@ -404,9 +404,13 @@ nav {
   display: none;
 }
 
+.hero .swiper {
+  width: 100%;
+}
+
 .slide_carousel1 {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .swiper-slide {
