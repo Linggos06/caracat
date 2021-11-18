@@ -1,5 +1,17 @@
 "use strict";
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var body = document.querySelector("body");
 var burger = document.querySelector(".icon_menu");
 var menu = document.querySelector(".header_links");
@@ -31,61 +43,60 @@ function closeMenu() {
   body.style.overflowY = "visible";
 }
 
-var swiper1 = new Swiper(".slide_carousel.swiper1", {
-  // Optional parameters
+var swiper1;
+var parallaxSlider = ".swiper1";
+var parallaxSliderOptions = {
   direction: "horizontal",
   loop: true,
-  speed: 950,
-  freeMode: {
-    enabled: true,
-    sticky: true
+  speed: 1000,
+  parallax: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000
   },
   navigation: {
     nextEl: '.swiper-button-next1',
     prevEl: '.swiper-button-prev1'
   },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1
-    },
-    // when window width is >= 605px
-    605: {
-      slidesPerView: 1
-    },
-    // when window width is >= 993px
-    993: {
-      slidesPerView: 1
-    }
-  },
   pagination: {
     el: ".swiper-pagination",
     type: "bullets",
-    dynamicBullets: true
+    dynamicBullets: true,
+    clickable: true
+  },
+  on: {
+    init: function init() {
+      var swiper = this;
+
+      for (var i = 0; i < swiper.slides.length; i++) {
+        var image = _toConsumableArray(swiper.slides[i].children).find(function (element) {
+          return element.classList.contains("image_container");
+        });
+
+        image.setAttribute("data-swiper-parallax", "".concat(0.75 * swiper.width));
+        image.setAttribute("data-swiper-parallax-opacity", "".concat(0.5));
+
+        var title = _toConsumableArray(swiper.slides[i].children).find(function (element) {
+          return element.classList.contains("slide_header");
+        });
+
+        title.setAttribute("data-swiper-parallax", "".concat(0.6 * swiper.width));
+      }
+    }
   }
+};
+swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
+window.addEventListener("resize", function () {
+  swiper1.destroy();
+  swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
 });
 var swiper2 = new Swiper(".slide_carousel.swiper2", {
-  // Optional parameters
   direction: "horizontal",
   loop: true,
   speed: 950,
   freeMode: {
     enabled: true,
     sticky: true
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1
-    },
-    // when window width is >= 605px
-    605: {
-      slidesPerView: 1
-    },
-    // when window width is >= 993px
-    993: {
-      slidesPerView: 1
-    }
   },
   navigation: {
     nextEl: '.swiper-button-next2',
@@ -93,27 +104,11 @@ var swiper2 = new Swiper(".slide_carousel.swiper2", {
   }
 });
 var swiper3 = new Swiper(".slide_carousel.swiper3", {
-  // Optional parameters
-  direction: "horizontal",
   loop: true,
   speed: 950,
   freeMode: {
     enabled: true,
     sticky: true
-  },
-  breakpoints: {
-    // when window width is >= 320px
-    320: {
-      slidesPerView: 1
-    },
-    // when window width is >= 605px
-    605: {
-      slidesPerView: 1
-    },
-    // when window width is >= 993px
-    993: {
-      slidesPerView: 1
-    }
   },
   navigation: {
     nextEl: '.swiper-button-next3',

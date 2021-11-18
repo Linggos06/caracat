@@ -31,108 +31,76 @@ function closeMenu() {
   body.style.position = "static";
     body.style.overflowY = "visible";
 }
+let swiper1;
+let parallaxSlider = ".swiper1";
+const parallaxSliderOptions = {
+  direction: "horizontal",
+  loop: true,
+  speed: 1000,
+  parallax: true,
+  grabCursor: true,
+  autoplay: {
+    delay: 5000,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next1',
+    prevEl: '.swiper-button-prev1',
+  },
 
-const swiper1 = new Swiper(".slide_carousel.swiper1", {
-    // Optional parameters
-    direction: "horizontal",
-    loop: true,
-    speed: 950,
-  
-    freeMode: {
-      enabled: true,
-      sticky: true,
-    },
-  
-    navigation: {
-      nextEl: '.swiper-button-next1',
-      prevEl: '.swiper-button-prev1',
-    },
-  
-  
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 605px
-      605: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 993px
-      993: {
-        slidesPerView: 1,
-      },
-    },
-  
-    pagination: {
-      el: ".swiper-pagination",
-      type: "bullets",
-      dynamicBullets: true,
-    },
-  });
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    dynamicBullets: true,
+    clickable: true
+  },
+
+  on: {
+    init: function() {
+      let swiper = this;
+      for(let i = 0; i < swiper.slides.length; i++) {
+      let image = [...swiper.slides[i].children].find(element => element.classList.contains("image_container"));
+      image.setAttribute("data-swiper-parallax", `${0.75 * swiper.width}`);
+      image.setAttribute("data-swiper-parallax-opacity", `${0.5}`);
+
+      let title = [...swiper.slides[i].children].find(element => element.classList.contains("slide_header"));
+      title.setAttribute("data-swiper-parallax", `${0.6 * swiper.width}`);
+      }
+
+    }
+  }
+}
+ swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
+
+window.addEventListener("resize", () => {
+  swiper1.destroy();
+  swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
+}
+
+)
 
   const swiper2 = new Swiper(".slide_carousel.swiper2", {
-    // Optional parameters
     direction: "horizontal",
     loop: true,
     speed: 950,
-  
     freeMode: {
       enabled: true,
       sticky: true,
     },
-
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 605px
-      605: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 993px
-      993: {
-        slidesPerView: 1,
-      },
-    },
-  
     navigation: {
       nextEl: '.swiper-button-next2',
       prevEl: '.swiper-button-prev2',
     },
-  
   });
 
   const swiper3 = new Swiper(".slide_carousel.swiper3", {
-    // Optional parameters
-    direction: "horizontal",
     loop: true,
     speed: 950,
-  
     freeMode: {
       enabled: true,
       sticky: true,
     },
-
-    breakpoints: {
-      // when window width is >= 320px
-      320: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 605px
-      605: {
-        slidesPerView: 1,
-      },
-      // when window width is >= 993px
-      993: {
-        slidesPerView: 1,
-      },
-    },
-  
     navigation: {
       nextEl: '.swiper-button-next3',
       prevEl: '.swiper-button-prev3',
     },
-  
   });

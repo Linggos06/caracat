@@ -26,6 +26,14 @@
 	align-items: center;
   }
 
+  @mixin arrow-helper() {
+	content: '';
+	padding: 3px;
+	display: inline-block;
+	border: solid #5D5D5D;
+	border-width: 0 2px 2px 0;
+  }
+
 @import "fonts";
 
 $black: #000000;
@@ -383,10 +391,20 @@ nav {
 
 //Hero section
 
+
+.slide_carousel {
+	width: 100%;
+	height: 100vh;
+	
+}
+
 .swiper-slide {
   position: relative;
+  transition: opacity 0.6s ease, transform 0.3s ease;
+  overflow: hidden;
+  
 }
-.slider_header {
+.slide_header {
   position: absolute;
   bottom: calc(60px + (290 - 60) * ((100vw - 320px) / (1920 - 320)));
   left: calc(60px + (318 - 60) * ((100vw - 320px) / (1920 - 320)));
@@ -419,20 +437,21 @@ nav {
     top: 100px;
   }
 }
-.slide {
+.image_container {
   filter: brightness(60%);
+  
 
   @media screen and (max-width: $breakpoint-tablet) {
     height: 500px;
   }
 }
-.slide1 {
+.image1 {
   @include div-same-size-as-background-img("../img/hero1.jpg", 1920, 900);
 }
-.slide2 {
+.image2 {
   @include div-same-size-as-background-img("../img/hero2.jpg", 1920, 900);
 }
-.slide3 {
+.image3 {
   @include div-same-size-as-background-img("../img/hero3.jpg", 1920, 900);
 }
 .swiper-button-prev1 {
@@ -977,7 +996,6 @@ nav {
  		background: rgba(#f2f2f2, 0);
  		outline: none;
  		margin: 0;
-	
  		cursor: pointer;
  		@include center;
 		
@@ -1020,13 +1038,6 @@ nav {
     top: calc(50% - 15px);
     @include center;
     
-    @mixin arrow-helper() {
-      content: '';
-      padding: 3px;
-      display: inline-block;
-      border: solid #5D5D5D;
-      border-width: 0 2px 2px 0;
-    }
     &:after {
       @include arrow-helper();
       transform: rotate(-45deg);
