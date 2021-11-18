@@ -24,6 +24,7 @@ var backgr_header = document.querySelector(".background-img_header");
 var foregr_header = document.querySelector(".foreground-img_header");
 slider.addEventListener("change", ch);
 slider.addEventListener("input", ch);
+slider.addEventListener("touchmove", ch);
 
 function ch(e) {
   var sliderPos = e.target.value;

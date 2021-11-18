@@ -598,9 +598,9 @@ nav {
   }
 }
 .nature2 {
-  @media screen and (max-width: $breakpoint-tablet) {
-    flex: 0 1 50%;
-  }
+  // @media screen and (max-width: $breakpoint-tablet) {
+  //   flex: 0 1 50%;
+  // }
 }
 .nature3 {
   @media screen and (max-width: $breakpoint-small_desktop) {
@@ -610,12 +610,12 @@ nav {
 .nature4 {
   position: relative;
   flex: 1 1 25%;
-  @media screen and (max-width: $breakpoint-small_desktop) {
-    flex: 0 1 400px;
-  }
-  @media screen and (max-width: $breakpoint-tablet) {
-    flex: 0 1 60%;
-  }
+  // @media screen and (max-width: $breakpoint-small_desktop) {
+  //   flex: 0 1 400px;
+  // }
+  // @media screen and (max-width: $breakpoint-tablet) {
+  //   flex: 0 1 60%;
+  // }
   & h2 {
     position: absolute;
     top: 35%;

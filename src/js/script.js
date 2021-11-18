@@ -9,8 +9,9 @@ const sliderButton = document.querySelector(".slider-button");
 const backgr_header = document.querySelector(".background-img_header");
 const foregr_header = document.querySelector(".foreground-img_header");
 
-slider.addEventListener("change", ch)
-slider.addEventListener("input", ch)
+slider.addEventListener("change", ch);
+slider.addEventListener("input", ch);
+slider.addEventListener("touchmove", ch);
 
 function ch(e){
   const sliderPos = e.target.value;
