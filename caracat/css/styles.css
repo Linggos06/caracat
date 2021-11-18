@@ -144,6 +144,7 @@ body {
   font-style: normal;
   background-color: #ffffff;
   color: #ffffff;
+  scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -242,13 +243,13 @@ header {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 144px;
           flex: 0 1 144px;
-  min-width: 63px;
+  min-width: 83px;
   color: #ffffff;
   cursor: pointer;
 }
 
 .logo a {
-  display: block;
+  display: inline-block;
   height: 100%;
 }
 
@@ -427,8 +428,8 @@ nav {
   position: absolute;
   bottom: calc(60px + 230 * (100vw - 320px) / 1600);
   left: calc(60px + 258 * (100vw - 320px) / 1600);
-  font-size: calc(15px + 65 * (100vw - 320px) / 1600);
-  line-height: calc(23px + 67 * (100vw - 320px) / 1600);
+  font-size: calc(25px + 55 * (100vw - 320px) / 1600);
+  line-height: calc(29px + 61 * (100vw - 320px) / 1600);
   color: #ffffff;
   letter-spacing: 5px;
   max-width: 438px;
@@ -573,6 +574,16 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  -webkit-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+
+.nature_image:hover {
+  -webkit-box-flex: 4;
+      -ms-flex: 4;
+          flex: 4;
 }
 
 .nature_image img {
@@ -586,9 +597,9 @@ nav {
 
 .nature4 {
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 45%;
-          flex: 0 1 45%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 25%;
+          flex: 1 1 25%;
 }
 
 .nature4 h2 {
@@ -891,8 +902,8 @@ nav {
 
 .switch_photo_container h2 {
   position: absolute;
-  top: 60%;
-  left: 40%;
+  bottom: 10%;
+  left: 38%;
   font-family: "FreightBigProLight", serif;
   font-weight: 300;
   font-style: italic;
@@ -900,6 +911,19 @@ nav {
   text-align: right;
   font-size: calc(20px + 100 * (100vw - 320px) / 1600);
   line-height: calc(28px + 92 * (100vw - 320px) / 1600);
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
+.switch_photo_container .foreground-img_header {
+  left: 10px;
+  overflow: hidden;
+  text-align: left;
+  opacity: 0;
+  -webkit-transition: opacity 0.7s ease;
+  -o-transition: opacity 0.7s ease;
+  transition: opacity 0.7s ease;
 }
 
 .switch_photo_container .slider {
@@ -927,9 +951,9 @@ nav {
 .switch_photo_container .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
           appearance: none;
-  width: 5px;
+  width: 2px;
   height: 100vw;
-  border-right: 5px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: 10px 0 15px -13px #000;
           box-shadow: 10px 0 15px -13px #000;
   cursor: pointer;
@@ -1081,7 +1105,7 @@ nav {
   font-size: calc(22px + 58 * (100vw - 320px) / 1600);
   line-height: calc(30px + 76 * (100vw - 320px) / 1600);
   color: #ca9561;
-  margin-bottom: calc(20px + 35 * (100vw - 320px) / 1600);
+  margin-bottom: calc(13px + 42 * (100vw - 320px) / 1600);
 }
 
 .contacts_address span {
@@ -1615,7 +1639,7 @@ footer .link:hover {
   }
 
   .slide_header {
-    width: 150px;
+    width: 200px;
     letter-spacing: 2px;
     bottom: 0;
     top: 100px;
@@ -1708,7 +1732,7 @@ footer .link:hover {
   }
 
   .interior_container {
-    width: 97.7%;
+    width: 100%;
   }
 
   .upper,
@@ -1727,6 +1751,7 @@ footer .link:hover {
 
   .interior_item_container:not(:nth-child(even)) {
     margin-right: 0;
+    width: 100%;
   }
 
   .contacts_container {
@@ -1737,6 +1762,8 @@ footer .link:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 52%;
             flex: 0 1 52%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .contacts_info .paragraph {
@@ -1773,6 +1800,10 @@ footer .link:hover {
 }
 
 @media screen and (max-width: 550px) {
+  .slide_header {
+    width: 150px;
+  }
+
   .model_slide {
     height: 400px;
   }

@@ -97,6 +97,7 @@ body {
   font-style: normal;
   background-color: #ffffff;
   color: #ffffff;
+  scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -180,12 +181,12 @@ header {
 }
 .logo {
   flex: 0 1 144px;
-  min-width: 63px;
+  min-width: 83px;
   color: $white;
   cursor: pointer;
 
   & a {
-    display: block;
+    display: inline-block;
     height: 100%;
   }
 
@@ -430,8 +431,8 @@ nav {
   position: absolute;
   bottom: calc(60px + (290 - 60) * ((100vw - 320px) / (1920 - 320)));
   left: calc(60px + (318 - 60) * ((100vw - 320px) / (1920 - 320)));
-  font-size: calc(15px + (80 - 15) * ((100vw - 320px) / (1920 - 320)));
-  line-height: calc(23px + (90 - 23) * ((100vw - 320px) / (1920 - 320)));
+  font-size: calc(25px + (80 - 25) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(29px + (90 - 29) * ((100vw - 320px) / (1920 - 320)));
   color: $white;
   letter-spacing: 5px;
   max-width: 438px;
@@ -453,10 +454,13 @@ nav {
   }
 
   @media screen and (max-width: $breakpoint-tablet) {
-    width: 150px;
+    width: 200px;
     letter-spacing: 2px;
     bottom: 0;
     top: 100px;
+  }
+  @media screen and (max-width: 550px) {
+    width: 150px;
   }
 }
 .image_container {
@@ -576,6 +580,11 @@ nav {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  transition: all 0.8s ease;
+  cursor: pointer;
+}
+.nature_image:hover {
+  flex: 4;
 }
 .nature_image img {
   width: 100%;
@@ -600,7 +609,7 @@ nav {
 }
 .nature4 {
   position: relative;
-  flex: 0 1 45%;
+  flex: 1 1 25%;
   @media screen and (max-width: $breakpoint-small_desktop) {
     flex: 0 1 400px;
   }
@@ -986,8 +995,8 @@ nav {
 
   & h2 {
     position: absolute;
-    top: 60%;
-    left: 40%;
+    bottom: 10%;
+    left: 38%;
     font-family: "FreightBigProLight", serif;
     font-weight: 300;
     font-style: italic;
@@ -995,6 +1004,8 @@ nav {
     text-align: right;
     font-size: calc(20px + (120 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(28px + (120 - 28) * ((100vw - 320px) / (1920 - 320)));
+    transition: opacity .6s ease;
+    
 
     @media screen and (min-width: 1400px) {
       top: 45%;
@@ -1021,6 +1032,14 @@ nav {
     }
   }
 
+  & .foreground-img_header {
+    left: 10px;
+    overflow: hidden;
+    text-align: left;
+    opacity: 0;
+    transition: opacity .7s ease;
+  }
+
   & .slider {
     position: absolute;
     appearance: none;
@@ -1034,9 +1053,11 @@ nav {
 
     &::-webkit-slider-thumb {
       appearance: none;
-      width: 5px;
+      width: 2px;
       height: 100vw;
-      border-right: 5px solid rgba(255, 255, 255, 0.7);
+      // border-right: 4px solid rgba(255, 255, 255, 0.7);
+      // border-left: 2px solid rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 255, 255, 0.7);
       box-shadow: 10px 0 15px -13px #000;
       cursor: pointer;
     }
@@ -1092,7 +1113,7 @@ nav {
     width: 92.7%;
   }
   @media screen and (max-width: $breakpoint-tablet) {
-    width: 97.7%;
+    width: 100%;
   }
 }
 .upper,
@@ -1122,6 +1143,7 @@ nav {
 
   @media screen and (max-width: $breakpoint-tablet) {
     margin-right: 0;
+    width: 100%;
   }
 }
 
@@ -1151,6 +1173,8 @@ nav {
 .contacts_info {
   @media screen and (max-width: $breakpoint-tablet) {
     flex: 0 1 52%;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   & .paragraph {
     font-family: "FreightBigProLight";
@@ -1186,7 +1210,7 @@ nav {
   font-size: calc(22px + (80 - 22) * ((100vw - 320px) / (1920 - 320)));
   line-height: calc(30px + (106 - 30) * ((100vw - 320px) / (1920 - 320)));
   color: #ca9561;
-  margin-bottom: calc(20px + (55 - 20) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(13px + (55 - 13) * ((100vw - 320px) / (1920 - 320)));
 }
 .contacts_address span {
   width: 32px;
