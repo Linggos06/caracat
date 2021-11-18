@@ -1485,7 +1485,7 @@ footer .link:hover {
     overflow: auto;
     left: 0;
     right: 0;
-    top: -100%;
+    top: -200%;
     -webkit-transition: top 0.7s ease 0s;
     -o-transition: top 0.7s ease 0s;
     transition: top 0.7s ease 0s;
