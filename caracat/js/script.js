@@ -20,6 +20,8 @@ var current_year = document.querySelector(".year");
 var slider = document.querySelector("#slider");
 var foregroundImage = document.querySelector(".foreground-img");
 var sliderButton = document.querySelector(".slider-button");
+var backgr_header = document.querySelector(".background-img_header");
+var foregr_header = document.querySelector(".foreground-img_header");
 slider.addEventListener("change", ch);
 slider.addEventListener("input", ch);
 
@@ -27,6 +29,16 @@ function ch(e) {
   var sliderPos = e.target.value;
   foregroundImage.style.width = "".concat(sliderPos, "%");
   sliderButton.style.left = "calc(".concat(sliderPos, "% - 15px)");
+  var w = Number(foregroundImage.style.width.split('%')[0]);
+  console.log(w);
+
+  if (w > 49) {
+    foregr_header.style.opacity = "1";
+    backgr_header.style.opacity = "0";
+  } else if (w <= 48) {
+    backgr_header.style.opacity = "1";
+    foregr_header.style.opacity = "0";
+  }
 }
 
 current_year.textContent = new Date().getFullYear();
@@ -48,7 +60,7 @@ var parallaxSlider = ".swiper1";
 var parallaxSliderOptions = {
   direction: "horizontal",
   loop: true,
-  speed: 1100,
+  speed: 1000,
   parallax: true,
   grabCursor: true,
   autoplay: {

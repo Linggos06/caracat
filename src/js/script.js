@@ -6,6 +6,8 @@ const current_year = document.querySelector(".year");
 const slider = document.querySelector("#slider");
 const foregroundImage = document.querySelector(".foreground-img");
 const sliderButton = document.querySelector(".slider-button");
+const backgr_header = document.querySelector(".background-img_header");
+const foregr_header = document.querySelector(".foreground-img_header");
 
 slider.addEventListener("change", ch)
 slider.addEventListener("input", ch)
@@ -14,6 +16,15 @@ function ch(e){
   const sliderPos = e.target.value;
   foregroundImage.style.width = `${sliderPos}%`;
    sliderButton.style.left = `calc(${sliderPos}% - 15px)`;
+   let w = Number(foregroundImage.style.width.split('%')[0]);
+   console.log(w);
+   if(w > 49){
+    foregr_header.style.opacity = "1";
+    backgr_header.style.opacity = "0";
+ }else if(w <= 48) {
+    backgr_header.style.opacity = "1";
+    foregr_header.style.opacity = "0";
+}
 }
 
 current_year.textContent = new Date().getFullYear();
@@ -36,7 +47,7 @@ let parallaxSlider = ".swiper1";
 const parallaxSliderOptions = {
   direction: "horizontal",
   loop: true,
-  speed: 1100,
+  speed: 1000,
   parallax: true,
   grabCursor: true,
   autoplay: {
