@@ -48,7 +48,7 @@ var parallaxSlider = ".swiper1";
 var parallaxSliderOptions = {
   direction: "horizontal",
   loop: true,
-  speed: 1000,
+  speed: 1100,
   parallax: true,
   grabCursor: true,
   autoplay: {
@@ -90,7 +90,7 @@ window.addEventListener("resize", function () {
   swiper1.destroy();
   swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
 });
-var swiper2 = new Swiper(".slide_carousel.swiper2", {
+var swiper2 = new Swiper(".swiper2", {
   direction: "horizontal",
   loop: true,
   speed: 950,
@@ -103,7 +103,7 @@ var swiper2 = new Swiper(".slide_carousel.swiper2", {
     prevEl: '.swiper-button-prev2'
   }
 });
-var swiper3 = new Swiper(".slide_carousel.swiper3", {
+var swiper3 = new Swiper(".swiper3", {
   loop: true,
   speed: 950,
   freeMode: {
