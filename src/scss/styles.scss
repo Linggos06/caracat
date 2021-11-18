@@ -21,18 +21,34 @@
 }
 
 @mixin center() {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  @mixin arrow-helper() {
-	content: '';
-	padding: 3px;
-	display: inline-block;
-	border: solid #5D5D5D;
-	border-width: 0 2px 2px 0;
+@mixin arrow-helper() {
+  content: "";
+  padding: 3px;
+  display: inline-block;
+  border: solid #5d5d5d;
+  border-width: 0 2px 2px 0;
+}
+
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  padding-top: math.div($height, $width) * 100%;
+  img,
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
   }
+}
 
 @import "fonts";
 
@@ -208,8 +224,13 @@ header {
     flex: 0 0 auto;
     flex-direction: column;
     justify-content: flex-start;
-    background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(1,86,105,1) 50%, rgba(12,153,181,1) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      180deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(1, 86, 105, 1) 50%,
+      rgba(12, 153, 181, 1) 100%
+    );
     z-index: 15;
 
     &.active {
@@ -391,18 +412,15 @@ nav {
 
 //Hero section
 
-
-.slide_carousel {
-	width: 100%;
-	height: 100vh;
-	
+.slide_carousel1 {
+  width: 100%;
+  height: 100vh;
 }
 
 .swiper-slide {
   position: relative;
   transition: opacity 0.6s ease, transform 0.3s ease;
   overflow: hidden;
-  
 }
 .slide_header {
   position: absolute;
@@ -439,7 +457,6 @@ nav {
 }
 .image_container {
   filter: brightness(60%);
-  
 
   @media screen and (max-width: $breakpoint-tablet) {
     height: 500px;
@@ -539,53 +556,53 @@ nav {
 .seasons_container {
   display: flex;
   width: 100%;
-  height: 900px;
+  height: 100vh;
 
   @media screen and (max-width: $breakpoint-small_desktop) {
-    height: 700px;
+    height: 80vh;
   }
-
   @media screen and (max-width: $breakpoint-tablet) {
-    height: 500px;
+    height: 70vh;
   }
 }
+.nature_image {
+  display: flex;
+  flex: 1;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.nature_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
 .nature1 {
-  background: url("../img/nature1.jpg") center/cover no-repeat;
-  flex: 0 1 325px;
-
   @media screen and (max-width: $breakpoint-tablet) {
     display: none;
   }
 }
 .nature2 {
-  background: url("../img/nature2.jpg") center/cover no-repeat;
-  flex: 0 1 325px;
-
   @media screen and (max-width: $breakpoint-tablet) {
     flex: 0 1 50%;
   }
 }
 .nature3 {
-  background: url("../img/nature3.jpg") center/cover no-repeat;
-  flex: 0 1 325px;
-
   @media screen and (max-width: $breakpoint-small_desktop) {
     display: none;
   }
 }
 .nature4 {
   position: relative;
-  background: url("../img/nature4.jpg") center/cover no-repeat;
-  flex: 0 1 956px;
-
+  flex: 0 1 45%;
   @media screen and (max-width: $breakpoint-small_desktop) {
     flex: 0 1 400px;
   }
-
   @media screen and (max-width: $breakpoint-tablet) {
     flex: 0 1 60%;
   }
-
   & h2 {
     position: absolute;
     top: 35%;
@@ -593,11 +610,9 @@ nav {
     max-width: 574px;
     font-size: calc(20px + (80 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(28px + (90 - 28) * ((100vw - 320px) / (1920 - 320)));
-
     @media screen and (max-width: $breakpoint-small_desktop) {
       left: 8%;
     }
-
     @media screen and (max-width: $breakpoint-tablet) {
       max-width: 250px;
       left: 10%;
@@ -708,6 +723,7 @@ nav {
   & h2 {
     font-size: calc(20px + (90 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(28px + (113 - 28) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: 15px;
   }
 
   & p {
@@ -724,6 +740,7 @@ nav {
 
 .comf_container {
   @include div-same-size-as-background-img("../img/comfy_img.jpg", 1920, 900);
+  background-attachment: fixed;
   position: relative;
   width: 100%;
 
@@ -732,6 +749,7 @@ nav {
   }
 
   @media screen and (max-width: 550px) {
+    background-attachment: scroll;
     height: 400px;
   }
   @media screen and (max-width: 400px) {
@@ -744,7 +762,7 @@ nav {
   left: 45%;
   width: 45%;
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 470px) {
     top: 10%;
     color: #0f0c05;
   }
@@ -787,6 +805,9 @@ nav {
     padding-top: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320)));
     padding-bottom: calc(15px + (50 - 15) * ((100vw - 320px) / (1920 - 320)));
   }
+  & .swiper-slide {
+    overflow: visible;
+  }
 }
 
 .swiper3 {
@@ -795,6 +816,10 @@ nav {
     width: 17px;
     height: 30px;
     left: 50px;
+
+    @media screen and (max-width: 1600px) {
+      left: 30px;
+    }
 
     @media screen and (max-width: 850px) {
       left: 10px;
@@ -810,6 +835,10 @@ nav {
     width: 17px;
     height: 30px;
     right: 50px;
+
+    @media screen and (max-width: 1600px) {
+      right: 30px;
+    }
 
     @media screen and (max-width: 850px) {
       right: 10px;
@@ -832,7 +861,7 @@ nav {
     justify-content: space-evenly;
   }
   @media screen and (max-width: 1350px) {
-    max-width: 900px;
+    max-width: 960px;
   }
   @media screen and (max-width: $breakpoint-small_desktop) {
     max-width: 700px;
@@ -857,6 +886,7 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 
   @media screen and (max-width: 1500px) {
     flex: 0 1 368px;
@@ -942,112 +972,109 @@ nav {
 
 //Switch images
 
- .switch_photo_container {
- 	position: relative;
-	width: 100%;
- 	height: 100vw;
- 	max-height: 910px;
- 	max-width: 1920px;
-	overflow: hidden;
+.switch_photo_container {
+  position: relative;
+  width: 100%;
+  height: 100vw;
+  max-height: 910px;
+  max-width: 1920px;
+  overflow: hidden;
 
-	& h2 {
-		position: absolute;
-		top: 60%;
-		left: 40%;
-		font-family: 'FreightBigProLight', serif;
-        font-weight: 300;
-        font-style: italic;
-		max-width: 570px;
-		text-align: right;
-		font-size: calc(20px + (120 - 20) * ((100vw - 320px) / (1920 - 320)));
-		line-height: calc(28px + (120 - 28) * ((100vw - 320px) / (1920 - 320)));
-
-		@media screen and (min-width: 1400px) {
-			top: 45%;
-			}
-	
-		@media screen and (max-width: $breakpoint-small_desktop) {
-		max-width: 470px;
-
-		}
-
-		@media screen and (max-width: 810px) {
-			max-width: 370px;
-			}
-	
-		@media screen and (max-width: $breakpoint-tablet) {
-		  max-width: 250px;
-		}
-
-		@media screen and (max-width: 500px) {
-			max-width: 200px;
-		  }
-
-		  @media screen and (max-width: 400px) {
-			max-width: 170px;
-		  }
-	}
-
- 	& .slider {
- 		position: absolute;
- 		appearance: none;
- 		width: 100%;
- 		height: 100%;
- 		background: rgba(#f2f2f2, 0);
- 		outline: none;
- 		margin: 0;
- 		cursor: pointer;
- 		@include center;
-		
- 		&::-webkit-slider-thumb {
- 		  appearance: none;
- 		  width: 5px;
- 		  height: 100vw;
-		   border-right: 5px solid rgba(255,255,255,0.7);
-		   box-shadow: 10px 0 15px -13px #000;
- 		  cursor: pointer;
- 	  }
- 	}
- }
- .img {
- 	position: absolute;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
- 	background-size: cover;
- 	background-repeat: no-repeat;
- }
- .background-img {
- 	background-image: url("../img/Dis_Yol_Retouch.jpg");
-	
- }
- .foreground-img {
- 	background-image: url("../img/Dis_Deniz_Retouch.jpg");
- 	width: 38%;
-}
-.slider-button {
-    $size: 30px;
-    pointer-events: none;
+  & h2 {
     position: absolute;
-    width: $size;
-    height: $size;
-    border-radius: 50%;
-    background-color: white;
-    left: calc(38% - 15px);
-    top: calc(50% - 15px);
-    @include center;
-    
-    &:after {
-      @include arrow-helper();
-      transform: rotate(-45deg);
+    top: 60%;
+    left: 40%;
+    font-family: "FreightBigProLight", serif;
+    font-weight: 300;
+    font-style: italic;
+    max-width: 570px;
+    text-align: right;
+    font-size: calc(20px + (120 - 20) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(28px + (120 - 28) * ((100vw - 320px) / (1920 - 320)));
+
+    @media screen and (min-width: 1400px) {
+      top: 45%;
     }
-    &:before {
-      @include arrow-helper();
-      transform: rotate(135deg);
+
+    @media screen and (max-width: $breakpoint-small_desktop) {
+      max-width: 470px;
+    }
+
+    @media screen and (max-width: 810px) {
+      max-width: 370px;
+    }
+
+    @media screen and (max-width: $breakpoint-tablet) {
+      max-width: 250px;
+    }
+
+    @media screen and (max-width: 500px) {
+      max-width: 200px;
+    }
+
+    @media screen and (max-width: 400px) {
+      max-width: 170px;
     }
   }
 
+  & .slider {
+    position: absolute;
+    appearance: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(#f2f2f2, 0);
+    outline: none;
+    margin: 0;
+    cursor: pointer;
+    @include center;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 5px;
+      height: 100vw;
+      border-right: 5px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 10px 0 15px -13px #000;
+      cursor: pointer;
+    }
+  }
+}
+.img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.background-img {
+  background-image: url("../img/Dis_Yol_Retouch.jpg");
+}
+.foreground-img {
+  background-image: url("../img/Dis_Deniz_Retouch.jpg");
+  width: 38%;
+}
+.slider-button {
+  $size: 30px;
+  pointer-events: none;
+  position: absolute;
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background-color: white;
+  left: calc(38% - 15px);
+  top: calc(50% - 15px);
+  @include center;
+
+  &:after {
+    @include arrow-helper();
+    transform: rotate(-45deg);
+  }
+  &:before {
+    @include arrow-helper();
+    transform: rotate(135deg);
+  }
+}
 
 //Interior
 
@@ -1084,6 +1111,7 @@ nav {
   max-width: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 0;
 }
 .interior_item_container:not(:nth-child(even)) {
   margin-right: 10px;
@@ -1101,7 +1129,7 @@ nav {
 .contacts_container {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: calc(23px + (67 - 25) * ((100vw - 320px) / (1920 - 320)));
+  margin-bottom: calc(25px + (127 - 25) * ((100vw - 320px) / (1920 - 320)));
 
   @media screen and (max-width: $breakpoint-small_desktop) {
     width: 90%;
@@ -1174,7 +1202,7 @@ nav {
 .map_link {
   flex: 0 1 55%;
   max-width: 100%;
-  
+
   @media screen and (max-width: $breakpoint-tablet) {
     flex: 0 1 45%;
   }
@@ -1184,7 +1212,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(../img/map.png);
-  height: 100%; 
+  height: 100%;
 }
 
 //Footer
@@ -1210,7 +1238,6 @@ footer {
   @media screen and (max-width: $breakpoint-tablet) {
     height: 92px;
     flex-direction: column-reverse;
-
   }
 }
 .footer_menu {
@@ -1259,11 +1286,10 @@ footer {
   flex: 0 1 40%;
   @media screen and (max-width: $breakpoint-small_desktop) {
     flex: 0 1 35%;
-	justify-content: space-between;
+    justify-content: space-between;
   }
   @media screen and (max-width: $breakpoint-tablet) {
     width: 300px;
-	
   }
 
   & a {
@@ -1282,11 +1308,19 @@ footer {
     @media screen and (max-width: $breakpoint-small_desktop) {
       margin-right: 0;
     }
-	@media screen and (max-width: $breakpoint-tablet) {
-		margin-right: 14.8px;
-	  }
+    @media screen and (max-width: $breakpoint-tablet) {
+      margin-right: 14.8px;
+    }
   }
 }
+footer .link {
+  transition: transform 0.3s ease;
+}
+
+footer .link:hover {
+  transform: translateY(-5px);
+}
+
 .twitter_link {
   background-image: url(../img/twitter.png);
 }
@@ -1304,4 +1338,30 @@ footer {
 }
 .web_link {
   background-image: url(../img/rss.png);
+}
+
+.anim_text {
+  opacity: 0;
+}
+
+@keyframes fadeOut {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes showUp {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

@@ -404,7 +404,7 @@ nav {
   display: none;
 }
 
-.slide_carousel {
+.slide_carousel1 {
   width: 100%;
   height: 100vh;
 }
@@ -551,36 +551,40 @@ nav {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  height: 900px;
+  height: 100vh;
 }
 
-.nature1 {
-  background: url("../img/nature1.jpg") center/cover no-repeat;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 325px;
-          flex: 0 1 325px;
+.nature_image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
 }
 
-.nature2 {
-  background: url("../img/nature2.jpg") center/cover no-repeat;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 325px;
-          flex: 0 1 325px;
-}
-
-.nature3 {
-  background: url("../img/nature3.jpg") center/cover no-repeat;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 325px;
-          flex: 0 1 325px;
+.nature_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .nature4 {
   position: relative;
-  background: url("../img/nature4.jpg") center/cover no-repeat;
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 956px;
-          flex: 0 1 956px;
+      -ms-flex: 0 1 45%;
+          flex: 0 1 45%;
 }
 
 .nature4 h2 {
@@ -696,6 +700,7 @@ nav {
 .caracat_details_container h2 {
   font-size: calc(20px + 70 * (100vw - 320px) / 1600);
   line-height: calc(28px + 85 * (100vw - 320px) / 1600);
+  padding-bottom: 15px;
 }
 
 .caracat_details_container p {
@@ -715,6 +720,7 @@ nav {
   width: 100%;
   height: 0;
   padding-top: 46.875%;
+  background-attachment: fixed;
   position: relative;
   width: 100%;
 }
@@ -754,6 +760,10 @@ nav {
 .advantages .slide_carousel {
   padding-top: calc(15px + 35 * (100vw - 320px) / 1600);
   padding-bottom: calc(15px + 35 * (100vw - 320px) / 1600);
+}
+
+.advantages .swiper-slide {
+  overflow: visible;
 }
 
 .swiper3 .swiper-button-prev3 {
@@ -804,6 +814,8 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
 }
 
 .slide_image1 {
@@ -962,7 +974,7 @@ nav {
   content: "";
   padding: 3px;
   display: inline-block;
-  border: solid #5D5D5D;
+  border: solid #5d5d5d;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
@@ -973,7 +985,7 @@ nav {
   content: "";
   padding: 3px;
   display: inline-block;
-  border: solid #5D5D5D;
+  border: solid #5d5d5d;
   border-width: 0 2px 2px 0;
   -webkit-transform: rotate(135deg);
       -ms-transform: rotate(135deg);
@@ -1007,6 +1019,7 @@ nav {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  opacity: 0;
 }
 
 .interior_item_container:not(:nth-child(even)) {
@@ -1020,7 +1033,7 @@ nav {
 .contacts_container {
   width: 80%;
   margin: 0 auto;
-  margin-bottom: calc(23px + 42 * (100vw - 320px) / 1600);
+  margin-bottom: calc(25px + 102 * (100vw - 320px) / 1600);
 }
 
 .contacts_body {
@@ -1179,6 +1192,20 @@ footer {
   margin-right: 24.8px;
 }
 
+footer .link {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  -o-transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+footer .link:hover {
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
 .twitter_link {
   background-image: url(../img/twitter.png);
 }
@@ -1203,9 +1230,79 @@ footer {
   background-image: url(../img/rss.png);
 }
 
+.anim_text {
+  opacity: 0;
+}
+
+@-webkit-keyframes fadeOut {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes showUp {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes showUp {
+  from {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+    opacity: 0;
+  }
+
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    opacity: 1;
+  }
+}
+
 @media screen and (min-width: 1400px) {
   .switch_photo_container h2 {
     top: 45%;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .swiper3 .swiper-button-prev3 {
+    left: 30px;
+  }
+
+  .swiper3 .swiper-button-next3 {
+    right: 30px;
   }
 }
 
@@ -1232,7 +1329,7 @@ footer {
 
 @media screen and (max-width: 1350px) {
   .slide_container {
-    max-width: 900px;
+    max-width: 960px;
   }
 
   .slide_image {
@@ -1285,7 +1382,7 @@ footer {
   }
 
   .seasons_container {
-    height: 700px;
+    height: 80vh;
   }
 
   .nature3 {
@@ -1532,7 +1629,7 @@ footer {
   }
 
   .seasons_container {
-    height: 500px;
+    height: 70vh;
   }
 
   .nature1 {
@@ -1677,6 +1774,7 @@ footer {
   }
 
   .comf_container {
+    background-attachment: scroll;
     height: 400px;
   }
 
@@ -1697,6 +1795,13 @@ footer {
   }
 }
 
+@media screen and (max-width: 470px) {
+  .comf_text {
+    top: 10%;
+    color: #0f0c05;
+  }
+}
+
 @media screen and (max-width: 450px) {
   .model_slide {
     height: 320px;
@@ -1713,11 +1818,6 @@ footer {
 @media screen and (max-width: 400px) {
   .comf_container {
     height: 350px;
-  }
-
-  .comf_text {
-    top: 10%;
-    color: #0f0c05;
   }
 
   .switch_photo_container h2 {

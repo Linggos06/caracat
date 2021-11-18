@@ -104,3 +104,32 @@ window.addEventListener("resize", () => {
       prevEl: '.swiper-button-prev3',
     },
   });
+
+  const anim_text = document.querySelectorAll(".anim_text");
+  const interior_images = document.querySelectorAll(".interior_item");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting) {
+        entry.target.style.animation = `fadeOut 1.5s ${entry.target.dataset.delay} forwards ease-out`;
+        observer.unobserve(entry.target);
+      }
+    })
+  }, {threshold: 0.4});
+
+  const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if(entry.isIntersecting) {
+        entry.target.style.animation = `showUp 2s forwards ease-out`;
+        observer.unobserve(entry.target);
+      }
+    })
+  }, {threshold: 0.4});
+
+  anim_text.forEach((el) => {
+    observer.observe(el);
+  })
+  interior_images.forEach((el) => {
+    observer2.observe(el);
+  })
+

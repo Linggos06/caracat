@@ -115,3 +115,31 @@ var swiper3 = new Swiper(".slide_carousel.swiper3", {
     prevEl: '.swiper-button-prev3'
   }
 });
+var anim_text = document.querySelectorAll(".anim_text");
+var interior_images = document.querySelectorAll(".interior_item");
+var observer = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "fadeOut 1.5s ".concat(entry.target.dataset.delay, " forwards ease-out");
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.4
+});
+var observer2 = new IntersectionObserver(function (entries) {
+  entries.forEach(function (entry) {
+    if (entry.isIntersecting) {
+      entry.target.style.animation = "showUp 2s forwards ease-out";
+      observer.unobserve(entry.target);
+    }
+  });
+}, {
+  threshold: 0.4
+});
+anim_text.forEach(function (el) {
+  observer.observe(el);
+});
+interior_images.forEach(function (el) {
+  observer2.observe(el);
+});
