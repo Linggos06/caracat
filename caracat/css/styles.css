@@ -1417,12 +1417,6 @@ footer .link:hover {
     display: none;
   }
 
-  .nature4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 400px;
-            flex: 0 1 400px;
-  }
-
   .nature4 h2 {
     left: 8%;
   }
@@ -1662,18 +1656,6 @@ footer .link:hover {
 
   .nature1 {
     display: none;
-  }
-
-  .nature2 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 50%;
-            flex: 0 1 50%;
-  }
-
-  .nature4 {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 1 60%;
-            flex: 0 1 60%;
   }
 
   .nature4 h2 {
