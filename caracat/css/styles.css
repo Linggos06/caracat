@@ -605,6 +605,7 @@ nav {
   position: absolute;
   top: 35%;
   left: 15%;
+  padding-right: 15px;
   max-width: 474px;
   font-size: calc(20px + 60 * (100vw - 320px) / 1600);
   line-height: calc(28px + 62 * (100vw - 320px) / 1600);
