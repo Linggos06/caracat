@@ -22,7 +22,7 @@ seasons_cont.addEventListener("mouseover", (e)=>{
     seasons_header.style.top = "35%";
     seasons_header.style.left = "15%";
     seasons_header.style.maxWidth = "474px";
-    seasons_header.style.paddingLeft = "15px";
+    seasons_header.style.paddingRight = "15px";
   }else {
     nature4.insertAdjacentElement('afterend', seasons_header);
   }
