@@ -599,16 +599,17 @@ nav {
   }
 }
 .nature4 {
-  position: relative;
   flex: 1 1 25%;
 
-  & h2 {
+  & .seasons_header {
     position: absolute;
     top: 35%;
     left: 15%;
-    max-width: 574px;
+    max-width: 474px;
     font-size: calc(20px + (80 - 20) * ((100vw - 320px) / (1920 - 320)));
     line-height: calc(28px + (90 - 28) * ((100vw - 320px) / (1920 - 320)));
+    pointer-events: none;
+
     @media screen and (max-width: $breakpoint-small_desktop) {
       left: 8%;
     }

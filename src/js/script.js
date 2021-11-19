@@ -8,6 +8,38 @@ const foregroundImage = document.querySelector(".foreground-img");
 const sliderButton = document.querySelector(".slider-button");
 const backgr_header = document.querySelector(".background-img_header");
 const foregr_header = document.querySelector(".foreground-img_header");
+const seasons_cont = document.querySelector(".seasons_container");
+const seasons_header = document.querySelector(".seasons_header");
+const nature4 = document.querySelector(".nature_image_sea");
+
+seasons_cont.addEventListener("mouseover", (e)=>{
+  if(e.target.classList.contains("nature_image_winter") || e.target.classList.contains("nature_image_summer") || e.target.classList.contains("nature_image_road") ) {
+    e.target.insertAdjacentElement('afterend', seasons_header);
+    seasons_header.style.position = "absolute";
+    seasons_header.style.pointerEvents = "none";
+    seasons_header.style.fontSize = "calc(20px + (80 - 20) * ((100vw - 320px) / (1920 - 320)))";
+    seasons_header.style.lineHeight = "calc(28px + (90 - 28) * ((100vw - 320px) / (1920 - 320)))";
+    seasons_header.style.top = "35%";
+    seasons_header.style.left = "15%";
+    seasons_header.style.maxWidth = "474px";
+    seasons_header.style.paddingLeft = "15px";
+  }else {
+    nature4.insertAdjacentElement('afterend', seasons_header);
+  }
+ 
+})
+seasons_cont.addEventListener("mouseout", (e)=>{
+  if(e.target.classList.contains("nature_image_winter") || e.target.classList.contains("nature_image_summer") || e.target.classList.contains("nature_image_road") ) {
+  console.log(seasons_header.parentNode);
+  if (seasons_header.parentNode) {
+    seasons_header.parentNode.removeChild(seasons_header);
+    nature4.insertAdjacentElement('afterend', seasons_header);
+    
+  }else {
+    nature4.insertAdjacentElement('afterend', seasons_header);
+  }
+}
+})
 
 if(document.documentElement.clientWidth <= 992){
   let value = 51;

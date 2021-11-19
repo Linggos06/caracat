@@ -596,19 +596,19 @@ nav {
 }
 
 .nature4 {
-  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 25%;
           flex: 1 1 25%;
 }
 
-.nature4 h2 {
+.nature4 .seasons_header {
   position: absolute;
   top: 35%;
   left: 15%;
-  max-width: 574px;
+  max-width: 474px;
   font-size: calc(20px + 60 * (100vw - 320px) / 1600);
   line-height: calc(28px + 62 * (100vw - 320px) / 1600);
+  pointer-events: none;
 }
 
 .new_design .wrapper {
@@ -1423,7 +1423,7 @@ footer .link:hover {
     display: none;
   }
 
-  .nature4 h2 {
+  .nature4 .seasons_header {
     left: 8%;
   }
 
@@ -1660,7 +1660,7 @@ footer .link:hover {
     height: 70vh;
   }
 
-  .nature4 h2 {
+  .nature4 .seasons_header {
     max-width: 250px;
     left: 10%;
   }
