@@ -592,16 +592,7 @@ nav {
   object-fit: cover;
   object-position: center;
 }
-.nature1 {
-  @media screen and (max-width: $breakpoint-tablet) {
-    display: none;
-  }
-}
-.nature2 {
-  // @media screen and (max-width: $breakpoint-tablet) {
-  //   flex: 0 1 50%;
-  // }
-}
+
 .nature3 {
   @media screen and (max-width: $breakpoint-small_desktop) {
     display: none;
@@ -610,12 +601,7 @@ nav {
 .nature4 {
   position: relative;
   flex: 1 1 25%;
-  // @media screen and (max-width: $breakpoint-small_desktop) {
-  //   flex: 0 1 400px;
-  // }
-  // @media screen and (max-width: $breakpoint-tablet) {
-  //   flex: 0 1 60%;
-  // }
+
   & h2 {
     position: absolute;
     top: 35%;
@@ -1072,8 +1058,6 @@ nav {
       appearance: none;
       width: 2px;
       height: 100vw;
-      // border-right: 4px solid rgba(255, 255, 255, 0.7);
-      // border-left: 2px solid rgba(255, 255, 255, 0.7);
       background-color: rgba(255, 255, 255, 0.7);
       box-shadow: 10px 0 15px -13px #000;
       cursor: pointer;
