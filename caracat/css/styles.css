@@ -551,6 +551,27 @@ nav {
   color: #595b60;
 }
 
+.seasons {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.seasons_header_container {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  pointer-events: none;
+}
+
+.seasons_header {
+  font-family: "FreightBigProLight";
+  font-weight: 100;
+  font-style: normal;
+  font-size: calc(30px + 90 * (100vw - 320px) / 1600);
+  line-height: calc(30px + 90 * (100vw - 320px) / 1600);
+}
+
 .seasons_container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,23 +614,6 @@ nav {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-}
-
-.nature4 {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 25%;
-          flex: 1 1 25%;
-}
-
-.nature4 .seasons_header {
-  position: absolute;
-  top: 35%;
-  left: 15%;
-  padding-right: 15px;
-  max-width: 474px;
-  font-size: calc(20px + 60 * (100vw - 320px) / 1600);
-  line-height: calc(28px + 62 * (100vw - 320px) / 1600);
-  pointer-events: none;
 }
 
 .new_design .wrapper {
@@ -903,28 +907,15 @@ nav {
 
 .switch_photo_container h2 {
   position: absolute;
-  bottom: 10%;
+  top: 10%;
   right: 50px;
-  font-family: "FreightBigProLight", serif;
-  font-weight: 300;
+  font-family: "FreightBigProLight";
+  font-weight: lighter;
   font-style: italic;
-  max-width: 570px;
   text-align: right;
-  font-size: calc(20px + 100 * (100vw - 320px) / 1600);
-  line-height: calc(28px + 92 * (100vw - 320px) / 1600);
-  -webkit-transition: opacity 0.6s ease;
-  -o-transition: opacity 0.6s ease;
-  transition: opacity 0.6s ease;
-}
-
-.switch_photo_container .foreground-img_header {
-  left: 10px;
-  overflow: hidden;
-  text-align: left;
-  opacity: 0;
-  -webkit-transition: opacity 0.7s ease;
-  -o-transition: opacity 0.7s ease;
-  transition: opacity 0.7s ease;
+  font-size: calc(17px + 53 * (100vw - 320px) / 1600);
+  line-height: calc(28px + 42 * (100vw - 320px) / 1600);
+  width: calc(110px + 340 * (100vw - 320px) / 1600);
 }
 
 .switch_photo_container .slider {
@@ -1319,12 +1310,6 @@ footer .link:hover {
   }
 }
 
-@media screen and (min-width: 1400px) {
-  .switch_photo_container h2 {
-    top: 45%;
-  }
-}
-
 @media screen and (max-width: 1600px) {
   .swiper3 .swiper-button-prev3 {
     left: 30px;
@@ -1375,12 +1360,6 @@ footer .link:hover {
   }
 }
 
-@media screen and (max-width: 1200px) {
-  .switch_photo_container h2 {
-    max-width: 480px;
-  }
-}
-
 @media screen and (max-width: 1099px) {
   .slide_header {
     width: 320px;
@@ -1424,10 +1403,6 @@ footer .link:hover {
     display: none;
   }
 
-  .nature4 .seasons_header {
-    left: 8%;
-  }
-
   .slide_container {
     max-width: 700px;
   }
@@ -1436,10 +1411,6 @@ footer .link:hover {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 48%;
             flex: 0 1 48%;
-  }
-
-  .switch_photo_container h2 {
-    max-width: 470px;
   }
 
   .interior_container {
@@ -1472,12 +1443,6 @@ footer .link:hover {
 
   .footer_links a:not(:last-child) {
     margin-right: 0;
-  }
-}
-
-@media screen and (max-width: 860px) {
-  .switch_photo_container h2 {
-    max-width: 370px;
   }
 }
 
@@ -1661,11 +1626,6 @@ footer .link:hover {
     height: 70vh;
   }
 
-  .nature4 .seasons_header {
-    max-width: 250px;
-    left: 10%;
-  }
-
   .model .swiper-button-prev2 {
     left: 5px;
   }
@@ -1713,7 +1673,8 @@ footer .link:hover {
   }
 
   .switch_photo_container h2 {
-    max-width: 210px;
+    top: 15%;
+    right: 20px;
   }
 
   .interior_container {
@@ -1784,12 +1745,6 @@ footer .link:hover {
   }
 }
 
-@media screen and (max-width: 610px) {
-  .switch_photo_container h2 {
-    max-width: 180px;
-  }
-}
-
 @media screen and (max-width: 550px) {
   .slide_header {
     width: 150px;
@@ -1816,10 +1771,6 @@ footer .link:hover {
 }
 
 @media screen and (max-width: 510px) {
-  .switch_photo_container h2 {
-    max-width: 150px;
-  }
-
   .switch_photo_container .background-img_header {
     right: 20px;
   }
@@ -1839,10 +1790,6 @@ footer .link:hover {
 }
 
 @media screen and (max-width: 430px) {
-  .switch_photo_container h2 {
-    max-width: 130px;
-  }
-
   .footer_menu {
     font-size: 8px;
     line-height: 12px;
@@ -1852,11 +1799,5 @@ footer .link:hover {
 @media screen and (max-width: 400px) {
   .comf_container {
     height: 350px;
-  }
-}
-
-@media screen and (max-width: 387px) {
-  .switch_photo_container h2 {
-    max-width: 110px;
   }
 }
