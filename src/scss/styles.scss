@@ -561,6 +561,24 @@ nav {
 
 // Seasons
 
+.seasons {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.seasons_header_container {
+  position: absolute;
+  top: 35%;
+  left: 45%;
+  pointer-events: none;
+}
+.seasons_header {
+  font-family: 'FreightBigProLight';
+  font-weight: 100;
+  font-style: normal;
+  font-size: calc(30px + (120 - 30) * ((100vw - 320px) / (1920 - 320)));
+  line-height: calc(30px + (120 - 30) * ((100vw - 320px) / (1920 - 320)));
+}
 .seasons_container {
   display: flex;
   width: 100%;
@@ -592,34 +610,13 @@ nav {
   object-fit: cover;
   object-position: center;
 }
-
 .nature3 {
   @media screen and (max-width: $breakpoint-small_desktop) {
     display: none;
   }
 }
-.nature4 {
-  flex: 1 1 25%;
 
-  & .seasons_header {
-    position: absolute;
-    top: 35%;
-    left: 15%;
-    padding-right: 15px;
-    max-width: 474px;
-    font-size: calc(20px + (80 - 20) * ((100vw - 320px) / (1920 - 320)));
-    line-height: calc(28px + (90 - 28) * ((100vw - 320px) / (1920 - 320)));
-    pointer-events: none;
 
-    @media screen and (max-width: $breakpoint-small_desktop) {
-      left: 8%;
-    }
-    @media screen and (max-width: $breakpoint-tablet) {
-      max-width: 250px;
-      left: 10%;
-    }
-  }
-}
 
 //New design
 
@@ -983,52 +980,53 @@ nav {
 
   & h2 {
     position: absolute;
-    bottom: 10%;
+    top: 10%;
     right: 50px;
-    font-family: "FreightBigProLight", serif;
-    font-weight: 300;
+    font-family: "FreightBigProLight";
+    font-weight: lighter;
     font-style: italic;
-    max-width: 570px;
     text-align: right;
-    font-size: calc(20px + (120 - 20) * ((100vw - 320px) / (1920 - 320)));
-    line-height: calc(28px + (120 - 28) * ((100vw - 320px) / (1920 - 320)));
-    transition: opacity .6s ease;
+    font-size: calc(17px + (70 - 17) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(28px + (70 - 28) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(110px + (450 - 110) * ((100vw - 320px) / (1920 - 320)));;
+    // transition: opacity .6s ease;
     
 
-    @media screen and (min-width: 1400px) {
-      top: 45%;
-    }
+    // @media screen and (min-width: 1400px) {
+    //   // top: 45%;
+    // }
 
-    @media screen and (max-width: 1200px) {
-      max-width: 480px;
-    }
+    // @media screen and (max-width: 1200px) {
+    //   max-width: 480px;
+    // }
 
-    @media screen and (max-width: $breakpoint-small_desktop) {
-      max-width: 470px;
-    }
+    // @media screen and (max-width: $breakpoint-small_desktop) {
+    //   max-width: 470px;
+    // }
 
-    @media screen and (max-width: 860px) {
-      max-width: 370px;
-    }
+    // @media screen and (max-width: 860px) {
+    //   max-width: 370px;
+    // }
 
     @media screen and (max-width: $breakpoint-tablet) {
-      max-width: 210px;
+      top: 15%;
+      right: 20px;
     }
 
-    @media screen and (max-width: 610px) {
-      max-width: 180px;
-    }
+    // @media screen and (max-width: 610px) {
+    //   max-width: 180px;
+    // }
 
-    @media screen and (max-width: 510px) {
-      max-width: 150px;
-    }
+    // @media screen and (max-width: 510px) {
+    //   max-width: 150px;
+    // }
 
-    @media screen and (max-width: 430px) {
-      max-width: 130px;
-    }
-    @media screen and (max-width: 387px) {
-      max-width: 110px;
-    }
+    // @media screen and (max-width: 430px) {
+    //   max-width: 130px;
+    // }
+    // @media screen and (max-width: 387px) {
+    //   max-width: 110px;
+    // }
   }
 
   & .background-img_header {
@@ -1037,13 +1035,13 @@ nav {
     }
   }
 
-  & .foreground-img_header {
-    left: 10px;
-    overflow: hidden;
-    text-align: left;
-    opacity: 0;
-    transition: opacity .7s ease;
-  }
+  // & .foreground-img_header {
+  //   left: 10px;
+  //   overflow: hidden;
+  //   text-align: left;
+  //   opacity: 0;
+  //   transition: opacity .7s ease;
+  // }
 
   & .slider {
     position: absolute;
