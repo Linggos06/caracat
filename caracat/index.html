@@ -13,7 +13,6 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <!-- <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css"> -->
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>Caracat</title>
@@ -34,9 +33,9 @@
           </div>
         <nav>
           <ul class="header_menu">
-            <li class="menu_item"><a href="#">About Us</a></li>
-            <li class="menu_item"><a href="specification.html">Products</a></li>
-            <li class="menu_item"><a href="#">Contact Us</a></li>
+            <li class="menu_item"><a href="http://cara-cat.com/files/caracat_eng_catalogue.pdf" target="_blank">About Us</a></li>
+            <li class="menu_item"><a href="#">Products</a></li>
+            <li class="menu_item"><a href="#contacts">Contact Us</a></li>
           </ul>
         </nav>
         <div class="header_icons_section">
@@ -98,16 +97,16 @@
       <section class="seasons">
         <div class="seasons_container">
           <div class="nature1 nature_image">
-            <img class="nature_image_winter" src="img/winter2.jpg" alt="Winter">
+            <img class="nature_image_winter lazy" data-src="img/winter2.jpg" alt="Winter">
           </div>
           <div class="nature2 nature_image">
-            <img class="nature_image_summer" src="img/mountain2.jpg" alt="Summer">
+            <img class="nature_image_summer lazy" data-src="img/mountain2.jpg" alt="Summer">
           </div>
           <div class="nature3 nature_image">
-            <img class="nature_image_road" src="img/road2.jpg" alt="Forest">
+            <img class="nature_image_road lazy" data-src="img/road2.jpg" alt="Forest">
           </div>
           <div class="nature4 nature_image">
-            <img class="nature_image_sea" src="img/sea.jpg" alt="Sea">
+            <img class="nature_image_sea lazy" data-src="img/sea.jpg" alt="Sea">
           </div>
         </div>
         <div class="seasons_header_container">
@@ -245,45 +244,36 @@
         <div class="switch_photo_container">
 
           <div id="slider" class="beer-slider">
-            <img src="img/Dis_Yol_Retouch.jpg" alt="Left">
+            <img src="img/Dis_Yol_Retouch.jpg" alt="Marine Caracat">
             <div class="beer-reveal">
-              <img src="img/Dis_Deniz_Retouch.jpg" alt="Right"> 
+              <img class="lazy" data-src="img/Dis_Deniz_Retouch.jpg" alt="Road Caracat"> 
             </div>
           </div>
             <span class="slider_bar"></span>
-            <!-- <input type="range" class="beer-range" aria-label="Percent of revealed content" aria-valuemin="0" aria-valuemax="100" aria-valuenow="41" value="38" min="0" max="100"> --> -->
-            <!-- <div class='switch_photo_img background-img_container'>
-              <img src="img/Dis_Yol_Retouch.jpg" class="background-img"></img> -->
-             <!-- <h2 class="switch_photo_header background-img_header">Awesome engineering and a new life vision</h2> -->
-            <!-- </div> -->
-            <!-- <div class='switch_photo_img foreground-img_container'>
-              <img src="img/Dis_Deniz_Retouch.jpg" class="foreground-img"></img>
-            </div>
-            <input type="range" min="0" max="100" value="38" class="slider" name='slider' id="slider"/>
-            <div class='slider-button'></div> -->
+            <h2 class="switch_photo_header background-img_header">Awesome engineering and a new life vision</h2>
           </div> 
       </section>
       <section class="interior">
         <div class="interior_container">
           <div class="upper">
             <div class="interior1_container interior_item_container">
-              <img src="img/interior1.jpg" class="interior1 interior_item" alt="Interior"></img>
+              <img data-src="img/interior1.jpg" class="interior1 interior_item lazy" alt="Interior"></img>
             </div>
             <div class="interior2_container interior_item_container">
-              <img src="img/interior2.jpg" class="interior1 interior_item" alt="Interior"></img>
+              <img data-src="img/interior2.jpg" class="interior1 interior_item lazy" alt="Interior"></img>
             </div>
           </div>
          <div class="bottom">
           <div class="interior3_container interior_item_container">
-            <img src="img/interior3.jpg" class="interior1 interior_item" alt="Interior"></img>
+            <img data-src="img/interior3.jpg" class="interior1 interior_item lazy" alt="Interior"></img>
           </div>
           <div class="interior4_container interior_item_container">
-            <img src="img/interior4.jpg" class="interior1 interior_item" alt="Interior"></img>
+            <img data-src="img/interior4.jpg" class="interior1 interior_item lazy" alt="Interior"></img>
           </div>
          </div>
         </div>
       </section>
-      <section class="contacts">
+      <section id="contacts" class="contacts">
         <div class="contacts_container">
           <div class="contacts_body">
             <div class="contacts_info">
@@ -316,12 +306,12 @@
           <li><a href="#" class="link">PRIVACY & PROTECTION DATA</a></li>
         </ul>
         <div class="footer_links">
-          <a href="#"><span class="twitter_link link"></span></a>
-          <a href="#"><span class="linkedin_link link"></span></a>
-          <a href="#"><span class="facebook_link link"></span></a>
-          <a href="#"><span class="instagram_link link"></span></a>
-          <a href="#"><span class="youtube_link link"></span></a>
-          <a href="#"><span class="web_link link"></span></a>
+          <a href="#"><span class="twitter_link link" target="_blank"></span></a>
+          <a href="#"><span class="linkedin_link link" target="_blank"></span></a>
+          <a href="#"><span class="facebook_link link" target="_blank"></span></a>
+          <a href="#"><span class="instagram_link link" target="_blank"></span></a>
+          <a href="#"><span class="youtube_link link" target="_blank"></span></a>
+          <a href="#"><span class="web_link link" target="_blank"></span></a>
         </div>
       </div>
     </footer> 

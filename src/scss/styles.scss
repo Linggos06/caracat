@@ -98,7 +98,6 @@ body {
   font-style: normal;
   background-color: #ffffff;
   color: #ffffff;
-  scroll-behavior: smooth;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -973,270 +972,26 @@ nav {
 
 .switch_photo_container {
   position: relative;
-  // width: 100%;
-  // height: 100vw;
-  // max-height: 910px;
-  // max-width: 1920px;
   overflow: hidden;
 
-  // & > * {
-  //   height: 100%;
-  // }
+  & h2 {
+    position: absolute;
+    top: 10%;
+    right: 50px;
+    font-family: "FreightBigProLight";
+    font-weight: lighter;
+    font-style: italic;
+    text-align: right;
+    font-size: calc(17px + (70 - 17) * ((100vw - 320px) / (1920 - 320)));
+    line-height: calc(28px + (70 - 28) * ((100vw - 320px) / (1920 - 320)));
+    width: calc(110px + (450 - 110) * ((100vw - 320px) / (1920 - 320)));;
+    transition: opacity .6s ease;
+    @media screen and (max-width: $breakpoint-tablet) {
+      top: 8%;
+      right: 20px;
+    }
+  }
 
-  // & h2 {
-  //   position: absolute;
-  //   top: 10%;
-  //   right: 50px;
-  //   font-family: "FreightBigProLight";
-  //   font-weight: lighter;
-  //   font-style: italic;
-  //   text-align: right;
-  //   font-size: calc(17px + (70 - 17) * ((100vw - 320px) / (1920 - 320)));
-  //   line-height: calc(28px + (70 - 28) * ((100vw - 320px) / (1920 - 320)));
-  //   width: calc(110px + (450 - 110) * ((100vw - 320px) / (1920 - 320)));;
-    // transition: opacity .6s ease;
-    
-
-    // @media screen and (min-width: 1400px) {
-    //   // top: 45%;
-    // }
-
-    // @media screen and (max-width: 1200px) {
-    //   max-width: 480px;
-    // }
-
-    // @media screen and (max-width: $breakpoint-small_desktop) {
-    //   max-width: 470px;
-    // }
-
-    // @media screen and (max-width: 860px) {
-    //   max-width: 370px;
-    // }
-
-    // @media screen and (max-width: $breakpoint-tablet) {
-    //   top: 15%;
-    //   right: 20px;
-    // }
-
-    // @media screen and (max-width: 610px) {
-    //   max-width: 180px;
-    // }
-
-    // @media screen and (max-width: 510px) {
-    //   max-width: 150px;
-    // }
-
-    // @media screen and (max-width: 430px) {
-    //   max-width: 130px;
-    // }
-    // @media screen and (max-width: 387px) {
-    //   max-width: 110px;
-    // }
-  // }
-
-  // & .background-img_header {
-  //   @media screen and (max-width: 510px) {
-  //     right: 20px;
-  //   }
-  // }
-
-  // & .foreground-img_header {
-  //   left: 10px;
-  //   overflow: hidden;
-  //   text-align: left;
-  //   opacity: 0;
-  //   transition: opacity .7s ease;
-  // }
-
-  // & .slider {
-  //   position: absolute;
-  //   appearance: none;
-  //   width: 100%;
-  //   height: 100%;
-  //   background: rgba(#f2f2f2, 0);
-  //   outline: none;
-  //   margin: 0;
-  //   cursor: pointer;
-  //   z-index: 2;
-  //   @include center;
-
-  //   &::-webkit-slider-thumb {
-  //     appearance: none;
-  //     width: 4px;
-  //     height: 600vh;
-  //     background-color: rgba(255, 255, 255, 0.5);
-  //     cursor: pointer;
-  //   }
-  // }
-
-  // .beer-range::-webkit-slider-thumb {
-  //   -webkit-appearance:none;
-  //   width: 4px;
-  //   height: 300vh;
-  //   background-color: rgba(255, 255, 255, 0.5);
-  // }
-  // .beer-range::-moz-range-thumb {
-  //   -webkit-appearance:none;
-  //   height: 300vh;
-  // }
-  // .beer-range::-ms-tooltip {
-  //   display: none;
-  // }
-
-// .background-img,
-// .foreground-img {
-//   max-width: 100%;
-//   height: auto;
-//   vertical-align: bottom;
-// }
-// .foreground-img_container {
-//   position: absolute;
-//   left: 0;
-//   top: 0;
-//   bottom: 0;
-//   right: 100% - 38%;
-//   height: 100%;
-//   overflow: hidden;
-//   z-index: 1;
-//   & .foreground-img {
-//     width: calc(100% * 100% / 38%);
-//     max-width: none;
-//     height: 100%;
-//   }
-
-// }
-.switch_photo_img {
-  // position: absolute;
-  // z-index: 1;
-  // inset: 0px;
-  // top: 0;
-  // left: 0;
-  // width: 100%;
-  // height: 100%;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-}
-
-.background-img {
-  // position: absolute;
-  //     background-image: url("/img/Dis_Deniz_Retouch.jpg");
-  //     width: 100%;
-  // height: 100%;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // @include div-same-size-as-background-img("/img/Dis_Yol_Retouch.jpg", 5472, 3648);
-  
-}
-// .foreground-img_container {
-//     clip-path: inset(0px 0px 0px 430px);
-// }
-.foreground-img {
-  // background-image: url("/img/Dis_Yol_Retouch.jpg");
-  // width: 100%;
-  // height: 100%;
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center center;
-  // @include div-same-size-as-background-img("/img/Dis_Deniz_Retouch.jpg", 5472, 3648);
-
-  // width: 38%;
-  // max-width: 100%;
-  // height: auto;
-}
-// .slider_divider {
-//     position: absolute;
-//     overflow: hidden;
-//     z-index: 2;
-//     transform-style: preserve-3d;
-//     backface-visibility: hidden;
-//     width: 1920px;
-//     height: 910px;
-// }
-// .divider_carriage {
-  
-//     position: absolute;
-//     display: flex;
-//     -webkit-box-pack: center;
-//     justify-content: center;
-//     -webkit-box-align: center;
-//     align-items: center;
-//     transition: transform 0.4s ease 0s;
-//     width: 1920px;
-//     height: 910px;
-
-// }
-// .divider_container {
-//     position: relative;
-//     display: flex;
-//     -webkit-box-pack: center;
-//     justify-content: center;
-//     -webkit-box-align: center;
-//     align-items: center;
-//     flex-direction: row;
-//     height: 100%;
-// }
-// .divider_bar {
-//     width: 6px;
-//     height: 100%;
-//     // box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 3px 0px;
-//     background-color: rgb(255, 255, 255, .7);
-//     cursor: ew-resize;
-// }
-// // <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-// //<div class="elfsight-app-eecae0f8-548c-4063-9895-d2853c6bedcb"></div>
-// //<script src="https://apps.elfsight.com/p/platform.js" defer></script>
-
-// .slider-button {
-// }
-// .slider-button {
-//   $size: 30px;
-//   pointer-events: none;
-//   position: absolute;
-//   width: $size;
-//   height: $size;
-//   border-radius: 50%;
-//   background-color: white;
-//   left: calc(38% - 15px);
-//   top: calc(50% - 15px);
-//   cursor: ew-resize;
-//   z-index: 2;
-//   @include center;
-
-//   &:after {
-//     @include arrow-helper();
-//     transform: rotate(-45deg);
-//   }
-//   &:before {
-//     @include arrow-helper();
-//     transform: rotate(135deg);
-//   }
-  // position: absolute;
-  // z-index: 2;
-  // top: 0;
-  // bottom: 0;
-  // height: 100%;
-  // margin: 0;
-  // left: -1px;
-  // width: calc(100% + 2px);
-  // cursor: pointer;
-  // -webkit-appearance: slider-horizontal!important;
-  // -moz-appearance:none;
-  // opacity: 0;
-  // -ms-touch-action: auto;
-  // touch-action: auto;
-
-  // &::-webkit-slider-thumb {
-  //   -webkit-appearance:none;
-  //   height: 300vh;
-  // }
-  // &::-moz-range-thumb {
-  //   -webkit-appearance:none;
-  //   height: 300vh;
-  // }
-  // &::-ms-tooltip {
-  //   display: none;
-  // }
   .slider_bar {
     position: absolute;
     z-index: 2;
