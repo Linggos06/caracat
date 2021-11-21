@@ -1,7 +1,7 @@
 @font-face {
   font-family: "FreightBigProBlack";
   font-display: swap;
-  src: url("/fonts/FreightBigProBlack-Italic.woff") format("woff") url("/fonts/FreightBigProBlack-Italic.woff2") format("woff2");
+  src: url("../fonts/FreightBigProBlack-Italic.woff") format("woff") url("/fonts/FreightBigProBlack-Italic.woff2") format("woff2");
   font-weight: 900;
   font-style: italic;
 }
@@ -9,7 +9,7 @@
 @font-face {
   font-family: "FreightBigProBlack";
   font-display: swap;
-  src: url("/fonts/FreightBigProBlack-Regular.woff") format("woff") url("/fonts/FreightBigProBlack-Regular.woff2") format("woff2");
+  src: url("../fonts/FreightBigProBlack-Regular.woff") format("woff") url("/fonts/FreightBigProBlack-Regular.woff2") format("woff2");
   font-weight: 900;
   font-style: normal;
 }
@@ -17,7 +17,7 @@
 @font-face {
   font-family: "FreightBigProBook";
   font-display: swap;
-  src: url("/fonts/FreightBigProBook-Regular.woff") format("woff") url("/fonts/FreightBigProBook-Regular.woff2") format("woff2");
+  src: url("../fonts/FreightBigProBook-Regular.woff") format("woff") url("/fonts/FreightBigProBook-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -25,7 +25,7 @@
 @font-face {
   font-family: "FreightBigProBold";
   font-display: swap;
-  src: url("/fonts/FreightBigProBold-Regular.woff") format("woff") url("/fonts/FreightBigProBold-Regular.woff2") format("woff2");
+  src: url("../fonts/FreightBigProBold-Regular.woff") format("woff") url("/fonts/FreightBigProBold-Regular.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
 }
@@ -33,7 +33,7 @@
 @font-face {
   font-family: "FreightBigProBook";
   font-display: swap;
-  src: url("/fonts/FreightBigProBook-Italic.woff") format("woff") url("/fonts/FreightBigProBook-Italic.woff2") format("woff2");
+  src: url("../fonts/FreightBigProBook-Italic.woff") format("woff") url("/fonts/FreightBigProBook-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: italic;
 }
@@ -41,7 +41,7 @@
 @font-face {
   font-family: "FreightBigProLight";
   font-display: swap;
-  src: url("/fonts/FreightBigProLight-Regular.woff") format("woff") url("/fonts/FreightBigProLight-Regular.woff2") format("woff2");
+  src: url("../fonts/FreightBigProLight-Regular.woff") format("woff") url("/fonts/FreightBigProLight-Regular.woff2") format("woff2");
   font-weight: 300;
   font-style: normal;
 }
@@ -49,7 +49,7 @@
 @font-face {
   font-family: "FreightBigProBold";
   font-display: swap;
-  src: url("/fonts/FreightBigProBold-Italic.woff") format("woff") url("/fonts/FreightBigProBold-Italic.woff2") format("woff2");
+  src: url("../fonts/FreightBigProBold-Italic.woff") format("woff") url("/fonts/FreightBigProBold-Italic.woff2") format("woff2");
   font-weight: bold;
   font-style: italic;
 }
@@ -57,7 +57,7 @@
 @font-face {
   font-family: "FreightBigProMedium";
   font-display: swap;
-  src: url("/fonts/FreightBigProMedium-Italic.woff") format("woff") url("/fonts/FreightBigProMedium-Italic.woff2") format("woff2");
+  src: url("../fonts/FreightBigProMedium-Italic.woff") format("woff") url("/fonts/FreightBigProMedium-Italic.woff2") format("woff2");
   font-weight: 500;
   font-style: italic;
 }
@@ -65,7 +65,7 @@
 @font-face {
   font-family: "FreightBigProSemibold";
   font-display: swap;
-  src: url("/fonts/FreightBigProSemibold-Italic.woff") format("woff") url("/fonts/FreightBigProSemibold-Italic.woff2") format("woff2");
+  src: url("../fonts/FreightBigProSemibold-Italic.woff") format("woff") url("/fonts/FreightBigProSemibold-Italic.woff2") format("woff2");
   font-weight: 600;
   font-style: italic;
 }
@@ -73,7 +73,7 @@
 @font-face {
   font-family: "FreightBigProMedium";
   font-display: swap;
-  src: url("/fonts/FreightBigProMedium-Regular.woff") format("woff") url("/fonts/FreightBigProMedium-Regular.woff2") format("woff2");
+  src: url("../fonts/FreightBigProMedium-Regular.woff") format("woff") url("/fonts/FreightBigProMedium-Regular.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
 }
@@ -81,7 +81,7 @@
 @font-face {
   font-family: "FreightBigProSemibold";
   font-display: swap;
-  src: url("/fonts/FreightBigProSemibold-Regular.woff") format("woff") url("/fonts/FreightBigProSemibold-Regular.woff2") format("woff2");
+  src: url("../fonts/FreightBigProSemibold-Regular.woff") format("woff") url("/fonts/FreightBigProSemibold-Regular.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
 }
@@ -89,7 +89,7 @@
 @font-face {
   font-family: "FreightBigProLight";
   font-display: swap;
-  src: url("/fonts/FreightBigProLight-Italic.woff") format("woff") url("/fonts/FreightBigProLight-Italic.woff2") format("woff2");
+  src: url("../fonts/FreightBigProLight-Italic.woff") format("woff") url("/fonts/FreightBigProLight-Italic.woff2") format("woff2");
   font-weight: 300;
   font-style: italic;
 }
@@ -97,7 +97,7 @@
 @font-face {
   font-family: "Montserrat";
   font-display: swap;
-  src: url("/fonts/Montserrat-Regular.woff") format("woff") url("/fonts/Montserrat-Regular.woff2") format("woff2");
+  src: url("../fonts/Montserrat-Regular.woff") format("woff") url("/fonts/Montserrat-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
@@ -551,13 +551,13 @@ nav {
 }
 
 .search_icon {
-  background-image: url("/img/magnifying glass.png");
+  background-image: url("../img/magnifying glass.png");
   width: 18px;
   height: 18px;
 }
 
 .web_icon {
-  background-image: url("/img/web.png");
+  background-image: url("../img/web.png");
   width: 20px;
   height: 20px;
 }
@@ -614,7 +614,7 @@ nav {
 }
 
 .image1 {
-  background-image: url("/img/hero1.jpg");
+  background-image: url("../img/hero1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -624,7 +624,7 @@ nav {
 }
 
 .image2 {
-  background-image: url("/img/hero2.jpg");
+  background-image: url("../img/hero2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -634,7 +634,7 @@ nav {
 }
 
 .image3 {
-  background-image: url("/img/hero3.jpg");
+  background-image: url("../img/hero3.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -645,7 +645,7 @@ nav {
 
 .swiper-button-prev1 {
   font-family: serif;
-  background: url(/img/angle-left-solid.svg) center/cover no-repeat;
+  background: url(../img/angle-left-solid.svg) center/cover no-repeat;
   width: 20px;
   height: 25.84px;
 }
@@ -658,7 +658,7 @@ nav {
 
 .swiper-button-next1 {
   font-family: serif;
-  background: url(/img/angle-right-solid.svg) center/cover no-repeat;
+  background: url(../img/angle-right-solid.svg) center/cover no-repeat;
   width: 20px;
   height: 25.84px;
 }
@@ -822,7 +822,7 @@ nav {
 }
 
 .model .swiper-button-prev2 {
-  background: url(/img/arrow_left.png) center/cover no-repeat;
+  background: url(../img/arrow_left.png) center/cover no-repeat;
   width: 17px;
   height: 30px;
   left: 50px;
@@ -835,7 +835,7 @@ nav {
 }
 
 .model .swiper-button-next2 {
-  background: url(/img/arrow_right.png) center/cover no-repeat;
+  background: url(../img/arrow_right.png) center/cover no-repeat;
   width: 17px;
   height: 30px;
   right: 50px;
@@ -848,7 +848,7 @@ nav {
 }
 
 .model1 {
-  background-image: url("/img/image1.jpg");
+  background-image: url("../img/image1.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -858,7 +858,7 @@ nav {
 }
 
 .model2 {
-  background-image: url("/img/image2.jpg");
+  background-image: url("../img/image2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -868,7 +868,7 @@ nav {
 }
 
 .model3 {
-  background-image: url("/img/image3.png");
+  background-image: url("../img/image3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -906,7 +906,7 @@ nav {
 }
 
 .comf_container {
-  background-image: url("/img/comfy_img.jpg");
+  background-image: url("../img/comfy_img.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -960,7 +960,7 @@ nav {
 }
 
 .swiper3 .swiper-button-prev3 {
-  background: url(/img/arrow_left.png) center/cover no-repeat;
+  background: url(../img/arrow_left.png) center/cover no-repeat;
   width: 17px;
   height: 30px;
   left: 50px;
@@ -973,7 +973,7 @@ nav {
 }
 
 .swiper3 .swiper-button-next3 {
-  background: url(/img/arrow_right.png) center/cover no-repeat;
+  background: url(../img/arrow_right.png) center/cover no-repeat;
   width: 17px;
   height: 30px;
   right: 50px;
@@ -1012,7 +1012,7 @@ nav {
 }
 
 .slide_image1 {
-  background-image: url(/img/slider3-1.jpg);
+  background-image: url(../img/slider3-1.jpg);
 }
 
 .slide_text {
@@ -1050,23 +1050,23 @@ nav {
 }
 
 .slide_image2 {
-  background-image: url(/img/slider3-2.jpg);
+  background-image: url(../img/slider3-2.jpg);
 }
 
 .slide_image3 {
-  background-image: url(/img/slider3-3.jpg);
+  background-image: url(../img/slider3-3.jpg);
 }
 
 .slide_image4 {
-  background-image: url(/img/slider3-4.jpg);
+  background-image: url(../img/slider3-4.jpg);
 }
 
 .slide_image5 {
-  background-image: url(/img/slider3-5.jpg);
+  background-image: url(../img/slider3-5.jpg);
 }
 
 .slide_image6 {
-  background-image: url(/img/slider3-6.jpg);
+  background-image: url(../img/slider3-6.jpg);
 }
 
 .switch_photo_container {
@@ -1194,19 +1194,19 @@ nav {
 .contacts_address span {
   width: 32px;
   height: 34px;
-  background-image: url(/img/address.png);
+  background-image: url(../img/address.png);
 }
 
 .contacts_phone span {
   width: 25px;
   height: 26px;
-  background-image: url(/img/phone.png);
+  background-image: url(../img/phone.png);
 }
 
 .contacts_website span {
   width: 24px;
   height: 24px;
-  background-image: url(/img/instagram2.png);
+  background-image: url(../img/instagram2.png);
 }
 
 .map_link {
@@ -1220,7 +1220,7 @@ nav {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url(/img/map.png);
+  background-image: url(../img/map.png);
   height: 100%;
 }
 
@@ -1318,27 +1318,27 @@ footer .link:hover {
 }
 
 .twitter_link {
-  background-image: url(/img/twitter.png);
+  background-image: url(../img/twitter.png);
 }
 
 .linkedin_link {
-  background-image: url(/img/linkedin.png);
+  background-image: url(../img/linkedin.png);
 }
 
 .facebook_link {
-  background-image: url(/img/facebook.png);
+  background-image: url(../img/facebook.png);
 }
 
 .instagram_link {
-  background-image: url(/img/instagram1.png);
+  background-image: url(../img/instagram1.png);
 }
 
 .youtube_link {
-  background-image: url(/img/youtube.png);
+  background-image: url(../img/youtube.png);
 }
 
 .web_link {
-  background-image: url(/img/rss.png);
+  background-image: url(../img/rss.png);
 }
 
 .anim_text {
