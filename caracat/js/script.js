@@ -17,11 +17,22 @@ var burger = document.querySelector(".icon_menu");
 var menu = document.querySelector(".header_links");
 var close_on_mobile = document.querySelector(".close_on_mobile");
 var current_year = document.querySelector(".year");
-var slider = document.querySelector("#slider");
-var foregroundImage = document.querySelector(".foreground-img");
-var sliderButton = document.querySelector(".slider-button");
-var backgr_header = document.querySelector(".background-img_header");
-var foregr_header = document.querySelector(".foreground-img_header"); // const seasons_cont = document.querySelector(".seasons_container");
+var slider_bar = document.querySelector(".slider_bar");
+var input = document.querySelector(".beer-range");
+var events = ["change", "input"];
+events.forEach(function (e) {
+  input.addEventListener(e, move);
+});
+
+function move(e) {
+  slider_bar.style.left = "".concat(e.target.value, "%");
+} // const slider = document.querySelector("#slider");
+// const foregroundImage_container = document.querySelector(".foreground-img_container");
+// const foregroundImage = document.querySelector(".foreground-img");
+// const sliderButton = document.querySelector(".slider-button");
+// const backgr_header = document.querySelector(".background-img_header");
+// const foregr_header = document.querySelector(".foreground-img_header");
+// const seasons_cont = document.querySelector(".seasons_container");
 // const seasons_header = document.querySelector(".seasons_header");
 // const nature4 = document.querySelector(".nature_image_sea");
 // seasons_cont.addEventListener("mouseover", (e) => {
@@ -60,40 +71,40 @@ var foregr_header = document.querySelector(".foreground-img_header"); // const s
 //     }
 //   }
 // });
+// if (document.documentElement.clientWidth <= 992) {
+//   let value = 51;
+//   slider.value = value;
+//   foregroundImage.style.width = `${value}%`;
+//   sliderButton.style.left = `calc(${value}% - 15px)`;
+// }
+// if (document.documentElement.clientWidth <= 780) {
+//   let value = 58;
+//   slider.value = value;
+//   foregroundImage.style.width = `${value}%`;
+//   sliderButton.style.left = `calc(${value}% - 15px)`;
+// }
+// slider.addEventListener("change", ch);
+// slider.addEventListener("input", ch);
+// setImgWidth();
+// function setImgWidth () {
+//   console.log(foregroundImage.style.width = getComputedStyle(foregroundImage)['width']);
+// }
+// function ch(e) {
+//   setImgWidth();
+//   const sliderPos = e.target.value;
+//   foregroundImage_container.style.width = `${sliderPos}%`;
+//   sliderButton.style.left = `calc(${sliderPos}% - 15px)`;
+// //   // let w = Number(foregroundImage.style.width.split("%")[0]);
+// //   // console.log(w);
+// //   // if (w >= 51) {
+// //   //   foregr_header.style.opacity = "1";
+// //   //   backgr_header.style.opacity = "0";
+// //   // } else if (w <= 50) {
+// //   //   backgr_header.style.opacity = "1";
+// //   //   foregr_header.style.opacity = "0";
+// //   // }
+// }
 
-if (document.documentElement.clientWidth <= 992) {
-  var value = 51;
-  slider.value = value;
-  foregroundImage.style.width = "".concat(value, "%");
-  sliderButton.style.left = "calc(".concat(value, "% - 15px)");
-}
-
-if (document.documentElement.clientWidth <= 780) {
-  var _value = 58;
-  slider.value = _value;
-  foregroundImage.style.width = "".concat(_value, "%");
-  sliderButton.style.left = "calc(".concat(_value, "% - 15px)");
-}
-
-slider.addEventListener("change", ch);
-slider.addEventListener("input", ch);
-slider.addEventListener("touchmove", ch);
-
-function ch(e) {
-  var sliderPos = e.target.value;
-  foregroundImage.style.width = "".concat(sliderPos, "%");
-  sliderButton.style.left = "calc(".concat(sliderPos, "% - 15px)");
-  var w = Number(foregroundImage.style.width.split("%")[0]);
-  console.log(w);
-
-  if (w >= 51) {
-    foregr_header.style.opacity = "1";
-    backgr_header.style.opacity = "0";
-  } else if (w <= 50) {
-    backgr_header.style.opacity = "1";
-    foregr_header.style.opacity = "0";
-  }
-}
 
 current_year.textContent = new Date().getFullYear();
 burger.addEventListener("click", function (e) {
@@ -154,7 +165,7 @@ var parallaxSliderOptions = {
 swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
 window.addEventListener("resize", function () {
   swiper1.destroy();
-  swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions);
+  swiper1 = new Swiper(parallaxSlider, parallaxSliderOptions); // setImgWidth();
 });
 var swiper2 = new Swiper(".swiper2", {
   direction: "horizontal",
