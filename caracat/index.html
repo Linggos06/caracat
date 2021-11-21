@@ -13,6 +13,7 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <!-- <link rel="stylesheet" href="https://unpkg.com/beerslider/dist/BeerSlider.css"> -->
     <link rel="stylesheet" href="swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/styles.min.css" />
     <title>Caracat</title>
@@ -242,16 +243,25 @@
       </section>
       <section class="switch_photo">
         <div class="switch_photo_container">
-          
-          <div class='img background-img'>
-            <h2 class="switch_photo_header background-img_header">Awesome engineering and a new life vision</h2>
+
+          <div id="slider" class="beer-slider">
+            <img src="img/Dis_Yol_Retouch.jpg" alt="Left">
+            <div class="beer-reveal">
+              <img src="img/Dis_Deniz_Retouch.jpg" alt="Right"> 
+            </div>
           </div>
-          <div class='img foreground-img'>
-          </div>
-          <input type="range" min="0" max="100" value="38" class="slider" name='slider' id="slider"/>
-          <div class='slider-button'></div>
-          
-        </div>
+            <span class="slider_bar"></span>
+            <!-- <input type="range" class="beer-range" aria-label="Percent of revealed content" aria-valuemin="0" aria-valuemax="100" aria-valuenow="41" value="38" min="0" max="100"> --> -->
+            <!-- <div class='switch_photo_img background-img_container'>
+              <img src="img/Dis_Yol_Retouch.jpg" class="background-img"></img> -->
+             <!-- <h2 class="switch_photo_header background-img_header">Awesome engineering and a new life vision</h2> -->
+            <!-- </div> -->
+            <!-- <div class='switch_photo_img foreground-img_container'>
+              <img src="img/Dis_Deniz_Retouch.jpg" class="foreground-img"></img>
+            </div>
+            <input type="range" min="0" max="100" value="38" class="slider" name='slider' id="slider"/>
+            <div class='slider-button'></div> -->
+          </div> 
       </section>
       <section class="interior">
         <div class="interior_container">
@@ -316,6 +326,12 @@
       </div>
     </footer> 
     <script src="swiper/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/beerslider/dist/BeerSlider.js"></script>
+  <script>
+    new BeerSlider(document.getElementById('slider'), {
+  start: '38'
+});
+  </script>
     <script src="js/script.min.js"></script>
   </body>
 </html>
