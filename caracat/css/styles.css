@@ -1075,6 +1075,22 @@ nav {
   overflow: hidden;
 }
 
+.switch_photo_container h2 {
+  position: absolute;
+  top: 10%;
+  right: 50px;
+  font-family: "FreightBigProLight";
+  font-weight: lighter;
+  font-style: italic;
+  text-align: right;
+  font-size: calc(17px + 53 * (100vw - 320px) / 1600);
+  line-height: calc(28px + 42 * (100vw - 320px) / 1600);
+  width: calc(110px + 340 * (100vw - 320px) / 1600);
+  -webkit-transition: opacity 0.6s ease;
+  -o-transition: opacity 0.6s ease;
+  transition: opacity 0.6s ease;
+}
+
 .switch_photo_container .slider_bar {
   position: absolute;
   z-index: 2;
@@ -1746,6 +1762,11 @@ footer .link:hover {
 
   .slide_text h3 {
     letter-spacing: 0;
+  }
+
+  .switch_photo_container h2 {
+    top: 8%;
+    right: 20px;
   }
 
   .interior_container {
