@@ -1,0 +1,97 @@
+.hero_spec .image1_specs{
+background-image: url(/img/image_specs1.jpg);
+}
+.hero_spec .image2_specs{
+    background-image: url(/img/image_specs2.jpg);  
+}
+.interior_spec .interior_item {
+    opacity: 1;
+}
+.specification {
+    width: 100%
+}
+.specification_container {
+    padding-top: calc(15px + (67 - 18) * ((100vw - 320px) / (1920 - 320)));
+    padding-bottom: calc(15px + (45 - 15) * ((100vw - 320px) / (1920 - 320)));
+    width: 70%;
+    margin: 0 auto;
+
+    & h2 {
+        font-size: calc(16px + (90 - 16) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(22px + (113 - 22) * ((100vw - 320px) / (1920 - 320)));
+        color: #ca9561;
+        margin-bottom: calc(22px + (50 - 22) * ((100vw - 320px) / (1920 - 320)));
+    }
+
+    & > h2 {
+         @media screen and (max-width: 780px) {
+            text-align: center;
+          } 
+    }
+
+    @media screen and (max-width: 1100px) {
+        width: 75%;
+      }
+  
+      @media screen and (max-width: 992px) {
+        width: 90%;
+      }
+
+      @media screen and (max-width: 780px) {
+        width: 95%;
+      }
+
+}
+.spec_body {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: 620px) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+}
+.spec_part {
+    display: flex;
+    flex-direction: column;
+
+}
+.spec_left {
+    padding-right: 10px;
+}
+.spec_item {
+
+    & h3 {
+        font-family: "FreightBigProLight";
+        font-weight: 300;
+        font-style: normal;
+        font-size: calc(14px + (30 - 14) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(20px + (37 - 20) * ((100vw - 320px) / (1920 - 320)));
+        letter-spacing: -2px;
+        padding-bottom: 5px;
+        color: #ca9561;  
+
+        @media screen and (max-width: 992px) {
+            letter-spacing: 0px;
+          }
+    }
+    & li {
+        font-family: "FreightBigProLight";
+        font-weight: 200;
+        font-style: normal;
+        font-size: calc(13px + (25 - 13) * ((100vw - 320px) / (1920 - 320)));
+        line-height: calc(18px + (35 - 18) * ((100vw - 320px) / (1920 - 320)));
+        letter-spacing: -1px;
+        text-decoration: none;
+        color: #595b60;
+
+        @media screen and (max-width: 780px) {
+            letter-spacing: 0px;
+          }
+    }
+}
+.spec_item:not(:last-child) {
+    margin-bottom: calc(15px + (37 - 15) * ((100vw - 320px) / (1920 - 320)));
+}
+

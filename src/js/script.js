@@ -7,7 +7,6 @@ const slider_bar = document.querySelector(".slider_bar");
 const input = document.querySelector(".beer-range");
 
 // Switch_photos section 
-
 const events = ["change", "input"];
 events.forEach((e) => {
   input.addEventListener(e, move);
@@ -17,11 +16,9 @@ function move(e) {
 }
 
 // AUTOMATICALLY Update Copyright Year
-
 current_year.textContent = new Date().getFullYear();
 
 // Burger menu for mobile view
-
 burger.addEventListener("click", (e) => {
   menu.classList.add("active");
   body.style.position = "fixed";
@@ -35,7 +32,6 @@ function closeMenu() {
 }
 
 //Parallax swiper/slider
-
 let swiper1;
 let parallaxSlider = ".swiper1";
 const parallaxSliderOptions = {
@@ -111,7 +107,6 @@ const swiper3 = new Swiper(".swiper3", {
 });
 
 // Scroll down effects
-
 const anim_text = document.querySelectorAll(".anim_text");
 const interior_images = document.querySelectorAll(".interior_item");
 const observer = new IntersectionObserver(
@@ -144,8 +139,10 @@ interior_images.forEach((el) => {
   observer2.observe(el);
 });
 
-// Lazy Loading
+//Combined images slider
 
+
+// Lazy Loading
 document.addEventListener("DOMContentLoaded", function() {
   let lazyloadImages;    
   if ("IntersectionObserver" in window) {

@@ -147,7 +147,8 @@ anim_text.forEach(function (el) {
 });
 interior_images.forEach(function (el) {
   observer2.observe(el);
-}); // Lazy Loading
+}); //Combined images slider
+// Lazy Loading
 
 document.addEventListener("DOMContentLoaded", function () {
   var lazyloadImages;
