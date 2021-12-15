@@ -52,7 +52,6 @@
 
 @import "fonts";
 @import "BeerSlider";
-// @import "specification";
 
 $black: #000000;
 $white: #ffffff;
@@ -473,6 +472,9 @@ nav {
 }
 .image1 {
   @include div-same-size-as-background-img("/img/hero1.jpg", 1920, 900);
+  @media screen and (max-width: $breakpoint-tablet) {
+    background-position: 75%;
+  }
 }
 .image2 {
   @include div-same-size-as-background-img("/img/hero2.jpg", 1920, 900);
