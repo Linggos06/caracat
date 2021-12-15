@@ -1706,6 +1706,10 @@ footer .link:hover {
     height: 500px;
   }
 
+  .image1 {
+    background-position: 75%;
+  }
+
   .swiper-horizontal > .swiper-pagination-bullets,
   .swiper-pagination-bullets.swiper-pagination-horizontal,
   .swiper-pagination-custom,
