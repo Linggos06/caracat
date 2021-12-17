@@ -1,9 +1,9 @@
 .hero_spec .image1_specs {
-  background-image: url(/img/image_specs1.jpg);
+  background-image: url(../img/image_specs1.jpg);
 }
 
 .hero_spec .image2_specs {
-  background-image: url(/img/image_specs2.jpg);
+  background-image: url(../img/image_specs2.jpg);
 }
 
 .interior_spec .interior_item {
